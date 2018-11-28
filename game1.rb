@@ -611,7 +611,10 @@ $player_name = $player_name.chomp
 clear
 def segment1
 	puts "Now, "+ $player_name + ", what is your race?"
-	puts "Human:
+	puts <<~PlayerSelect
+	
+
+	Human:
 	defense = 5
 	speed = 8
 	stamina = 12
@@ -636,7 +639,9 @@ def segment1
 	stamina = 3
 
 	Hobbit health: your hp goes up by 2
-	"
+	
+	
+	PlayerSelect
 	print "[{1}]:"
 	$race = gets
 	$race = $race.chomp
