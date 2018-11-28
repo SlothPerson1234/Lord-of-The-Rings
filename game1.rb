@@ -709,7 +709,6 @@ def segment2
 	$weapon = gets
 	$weapon = $weapon.chomp
 
-<<<<<<< HEAD
 	case $weapon.downcase
 	when "commoner's daggers", "dagger"
 		$attack = 5
