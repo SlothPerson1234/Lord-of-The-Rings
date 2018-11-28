@@ -742,104 +742,30 @@ clear
 
 #open this for seizure	
 if true
-	print "A";timer(0.25);print " ";timer(0.25);print "l";timer(0.25);print "o";timer(0.25);print "n";timer(0.25);print "g";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "i";timer(0.25);print "m";
-	#clear
-	timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);print "o";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print " ";timer(0.25);print "p";timer(0.25);
-	#clear
-	print "o";timer(0.25);print "o";timer(0.25);print "r";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print "w";timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "l";
-	#clear
-	timer(0.25);print "i";timer(0.25);print "v";timer(0.25);print "e";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "n";timer(0.25);print "e";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);
-	#clear
-	print " ";timer(0.25);print "a";timer(0.25);print " ";timer(0.25);print "D";timer(0.25);print "r";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);print "o";timer(0.25);print "n";timer(0.25);print "'";
-	#clear
-	timer(0.25);print "s";timer(0.25);print " ";timer(0.25);print "l";timer(0.25);print "a";timer(0.25);print "i";timer(0.25);print "r";timer(0.25);print ".";timer(2);clear;print "O";timer(0.25);
-	#clear
-	print "n";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "d";timer(0.25);print "a";timer(0.25);print "y";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print " ";timer(0.25);print "p";
-	#clear
-	timer(0.25);print "o";timer(0.25);print "w";timer(0.25);print "e";timer(0.25);print "r";timer(0.25);print "f";timer(0.25);print "u";timer(0.25);print "l";timer(0.25);print " ";timer(0.25);print "w";timer(0.25);
-	#clear
-	print "i";timer(0.25);print "z";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print "o";timer(0.25);print "k";timer(0.25);print " ";
-	#clear
-	print "p";timer(0.25);print "i";timer(0.25);print "t";timer(0.25);print "y";timer(0.25);print " ";timer(0.25);print "o";timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);
-	#clear
-	print "o";timer(0.25);print "w";timer(0.25);print "n";timer(0.25);print ".";timer(2);clear;print "H";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "p";timer(0.25);print "u";timer(0.25);
-	#clear
-	print "t";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "D";timer(0.25);print "r";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);
-	#clear
-	print "o";timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print " ";timer(0.25);print "s";timer(0.25);print "l";timer(0.25);print "e";timer(0.25);print "e";timer(0.25);print "p";timer(0.25);print ",";timer(0.25);
-	#clear
-	print " ";timer(0.25);print "b";timer(0.25);print "u";timer(0.25);print "t";timer(0.25);print " ";timer(0.25);print "n";timer(0.25);print "o";timer(0.25);print "t";timer(0.25);print " ";timer(0.25);print "w";timer(0.25);
-	#clear
-	print "i";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "o";timer(0.25);print "u";timer(0.25);print "t";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print " ";timer(0.25);print "p";timer(0.25);print "r";timer(0.25);
-	#clear
-	print "i";timer(0.25);print "c";timer(0.25);print "e";timer(0.25);print ";";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);
-	#clear
-	print " ";timer(0.25);print "H";timer(0.25);print "e";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);print "t";timer(0.25);print " ";timer(0.25);print "o";timer(0.25);print "f";timer(0.25);print " ";timer(0.25);print "A";timer(0.25);print "n";timer(0.25);
-	#clear
-	print "u";timer(0.25);print "n";timer(0.25);print "d";timer(0.25);print "û";timer(0.25);print "r";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);
-	#clear
-	print "b";timer(0.25);print "i";timer(0.25);print "g";timer(0.25);print "g";timer(0.25);print "e";timer(0.25);print "s";timer(0.25);print "t";timer(0.25);print " ";timer(0.25);print "g";timer(0.25);print "e";timer(0.25);print "m";timer(0.25);print " ";timer(0.25);print "i";timer(0.25);
-	#clear
-	print "n";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "D";timer(0.25);print "r";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);
-	#clear
-	timer(0.25);print "o";print "n";timer(0.25);print "'";timer(0.25);print "s";timer(0.25);print " ";timer(0.25);print "h";timer(0.25);print "o";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);print "d";timer(0.25);print ".";timer(2);clear;print "O";
-	#clear
-	timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "d";timer(0.25);print "a";timer(0.25);print "y";timer(0.25);print " ";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "W";timer(0.25);print "i";timer(0.25);print "z";
-	#clear
-	timer(0.25);print "a";timer(0.25);print "r";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "w";timer(0.25);print "a";timer(0.25);print "s";timer(0.25);print " ";timer(0.25);print "s";timer(0.25);print "u";
-	#clear
-	timer(0.25);print "p";timer(0.25);print "p";timer(0.25);print "o";timer(0.25);print "s";timer(0.25);print "e";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print " ";
-	#clear
-	timer(0.25);print "l";timer(0.25);print "e";timer(0.25);print "a";timer(0.25);print "v";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "t";
-	#clear
-	timer(0.25);print "o";timer(0.25);print "w";timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "w";timer(0.25);print "i";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";
-	#clear
-	timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "g";timer(0.25);print "e";timer(0.25);print "m";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "c";timer(0.25);print "i";timer(0.25);print "t";timer(0.25);print "i";
-	#clear
-	timer(0.25);print "z";timer(0.25);print "e";timer(0.25);print "n";timer(0.25);print "s";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print "t";timer(0.25);print "t";timer(0.25);print "e";timer(0.25);print "m";
-	#clear
-	timer(0.25);print "p";timer(0.25);print "t";timer(0.25);print "e";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print " ";timer(0.25);print "s";timer(0.25);print "t";
-	#clear
-	timer(0.25);print "o";timer(0.25);print "p";timer(0.25);print " ";timer(0.25);print "h";timer(0.25);print "i";timer(0.25);print "m";timer(0.25);print ".";timer(2);clear;print "O";timer(0.25);print "u";timer(0.25);print "t";
-	#clear
-	timer(0.25);print "r";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);print "e";timer(0.25);print "d";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";
-	#clear
-	timer(0.25);print "r";timer(0.25);print "e";timer(0.25);print "m";timer(0.25);print "o";timer(0.25);print "v";timer(0.25);print "e";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";
-	#clear
-	timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "s";timer(0.25);print "l";timer(0.25);print "e";timer(0.25);print "e";timer(0.25);print "p";timer(0.25);print "i";timer(0.25);print "n";timer(0.25);print "g";
-	#clear
-	timer(0.25);print " ";timer(0.25);print "c";timer(0.25);print "h";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);print "m";timer(0.25);print " ";timer(0.25);print "o";timer(0.25);print "n";timer(0.25);print " ";
-	#clear
-	timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "D";timer(0.25);print "r";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);print "o";
-	#clear
-	timer(0.25);print "n";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print "n";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "r";timer(0.25);print "o";timer(0.25);print "d";
-	#clear
-	timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "a";timer(0.25);print "w";timer(0.25);print "a";timer(0.25);print "y";timer(0.25);print ".";timer(2);clear;print "T";timer(0.25);print "h";timer(0.25);print "e";
-	#clear
-	timer(0.25);print " ";timer(0.25);print "D";timer(0.25);print "r";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);print "o";timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "r";timer(0.25);print "a";
-	#clear			
-	timer(0.25);print "v";timer(0.25);print "a";timer(0.25);print "g";timer(0.25);print "e";timer(0.25);print "d";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";
-	#clear
-	timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print "w";timer(0.25);print "n";timer(0.25);print ".";timer(2);clear;timer(0.25);print "M";timer(0.25);print "e";timer(0.25);print "a";
-	#clear
-	timer(0.25);print "n";timer(0.25);print "w";timer(0.25);print "h";timer(0.25);print "i";timer(0.25);print "l";timer(0.25);print "e";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "t";
-	#clear
-	timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "W";timer(0.25);print "i";timer(0.25);print "z";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);print "d";timer(0.25);print ",";
-	#clear
-	timer(0.25);print " ";timer(0.25);print "w";timer(0.25);print "h";timer(0.25);print "o";timer(0.25);print "'";timer(0.25);print "s";timer(0.25);print " ";timer(0.25);print "n";timer(0.25);print "a";timer(0.25);print "m";timer(0.25);print "e";
-	#clear
-	timer(0.25);print " ";timer(0.25);print "i";timer(0.25);print "s";timer(0.25);print " ";timer(0.25);print "F";timer(0.25);print "a";timer(0.25);print "i";timer(0.25);print "r";timer(0.25);print "û";timer(0.25);print "m";
-	#clear
-	timer(0.25);print "a";timer(0.25);print "n";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "w";timer(0.25);print "h";timer(0.25);print "i";
-	#clear
-	timer(0.25);print "t";timer(0.25);print "e";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "s";timer(0.25);print "a";timer(0.25);print "t";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "p";
-	#clear
-	timer(0.25);print "l";timer(0.25);print "o";timer(0.25);print "t";timer(0.25);print "i";timer(0.25);print "n";timer(0.25);print "g";timer(0.25);print ",";timer(0.25);print " ";timer(0.25);print "i";timer(0.25);print "n";timer(0.25);print " ";
-	#clear
-	timer(0.25);print "t";timer(0.25);print "h";timer(0.25);print "e";timer(0.25);print " ";timer(0.25);print "t";timer(0.25);print "o";timer(0.25);print "w";timer(0.25);print "e";timer(0.25);print "r";timer(0.25);print ",";
-	timer(0.25);print " ";timer(0.25);print "B";timer(0.25);print "a";timer(0.25);print "r";timer(0.25);timer(0.25);print "a";timer(0.25);print "-";timer(0.25);print "D";print "û";timer(0.25);print "r";timer(0.25);print ".";
-	timer(0.25);print ".";timer(0.25);print ".";timer(2);clear;
-	#clear
+	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
+	sentence2 = "One day a powerful wizard took pity on the town."
+	sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
+	sentence4 = "On the day the Wizard was supposed to leave the town with the gem, citizens attempted to stop him."
+	sentence5 = "Outraged, he removed the sleeping charm on the Dragon, and rode away."
+	sentence6 = "The Dragon ravaged the town."
+	sentence7 = "Meanwhile, the Wizard, who's name is Fairûman the white, sat, ploting, in the tower, Bara-Dûr..."
+
+	#Combine all sentences into single array
+	intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
+	
+	#For each sentence...
+	intro.each do |sentence|
+		#...split each char into an array indecie, and then run loop on every indecie.
+		sentence.split(%r{}).each do |char| 
+			print char
+			timer(0.25)
+		end
+		#After last char, pause and clear screen, the move to next sentence
+		timer(2)
+		clear
+	end
+
+
 end
 puts "Volume 1:"
 puts "The Journy to Gondor"
