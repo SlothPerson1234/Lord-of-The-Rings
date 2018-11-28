@@ -659,7 +659,7 @@ def segment1
 		$stamina = 12
 
 
-	elsif $race.downcase $race == "dwarf"
+	elsif $race.downcase == "dwarf"
 		$defense = 12
 		$speed = 3
 		$stamina = 10
