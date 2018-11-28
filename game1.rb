@@ -709,24 +709,22 @@ def segment2
 	$weapon = gets
 	$weapon = $weapon.chomp
 
-	if $weapon == "Commoner's daggers" or $weapon == "Commoner's Daggers" or $weapon == "commoner's daggers" or $weapon == "commoner's Daggers"
+	case $weapon.downcase
+	when "commoner's daggers" or "dagger"
 		$attack = 5
 		$atcsppeed = 2
-	elsif $weapon == "Commoner's longsword" or $weapon == "Commoner's Longsword" or $weapon == "commoner's longsword" or $weapon == "commoner's Longsword"
+	when "commoner's longsword" or "longsword"
 		$attack = 2
 		$atcsppeed = 5
-	elsif $weapon == "Commoner's claymore" or $weapon == "Commoner's Claymore" or $weapon == "commoner's claymore" or $weapon == "commoner's Claymore"
+	when "commoner's claymore" or "claymore"
 		$attack = 10
 		$atcsppeed = 1
-	
-	elsif $weapon == "Commoner's lance" or $weapon == "Commoner's Lance" or $weapon == "commoner's lance" or $weapon == "commoner's Lance"
+	when "commoner's lance" or "lance"
 		$attack = 3
 		$atcsppeed = 3
-
-	elsif $weapon == "Commoner's shortsword" or $weapon == "Commoner's Shortsword" or $weapon == "commoner's shortsword" or $weapon == "commoner's Shortsword"
+	when "commoner's shortsword" or "shortsword"
 		$attack = 4
 		$atcsppeed = 2.5
-
 	else
 		clear
 		segment2
