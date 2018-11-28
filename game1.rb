@@ -584,7 +584,7 @@ end
 clear
 
 
-abort
+
 puts "Before the Rings"
 puts "Please type names and commands exactly as said."
 puts "For the best expirience, play in full screen."
