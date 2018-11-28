@@ -647,25 +647,25 @@ def segment1
 	$race = $race.chomp
 
 	#establishes an if statement
-	if $race == "Elf" or $race == "elf"
+	if $race.downcase == "elf"
 		$defense = 3
 		$speed = 12
 		$stamina = 10
 		$randgedatcspeed = 2
 
-	elsif $race == "Human" or $race == "human"
+	elsif $race.downcase == "human"
 		$defense = 5
 		$speed = 8
 		$stamina = 12
 
 
-	elsif $race == "Dwarf" or $race == "dwarf"
+	elsif $race.downcase $race == "dwarf"
 		$defense = 12
 		$speed = 3
 		$stamina = 10
 		$baseatc = 2
 
-	elsif $race == "Hobbit" or $race == "hobbit"
+	elsif $race.downcase == "hobbit"
 		$defense = 11
 		$speed = 10
 		$stamina = 3
