@@ -710,19 +710,19 @@ def segment2
 	$weapon = $weapon.chomp
 
 	case $weapon.downcase
-	when "commoner's daggers" or "dagger"
+	when "commoner's daggers", "dagger"
 		$attack = 5
 		$atcsppeed = 2
-	when "commoner's longsword" or "longsword"
+	when "commoner's longsword", "longsword"
 		$attack = 2
 		$atcsppeed = 5
-	when "commoner's claymore" or "claymore"
+	when "commoner's claymore", "claymore"
 		$attack = 10
 		$atcsppeed = 1
-	when "commoner's lance" or "lance"
+	when "commoner's lance", "lance"
 		$attack = 3
 		$atcsppeed = 3
-	when "commoner's shortsword" or "shortsword"
+	when "commoner's shortsword", "shortsword"
 		$attack = 4
 		$atcsppeed = 2.5
 	else
