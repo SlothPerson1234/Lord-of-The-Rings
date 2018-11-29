@@ -1,5 +1,4 @@
-#hi people reading this. This is a tediouse developement that is still a work in progress, and will always be so. 
-#I plan to create multiple volumes, and expand this midle earthuniverse to the max, or at least preety darn close.
+
 class Volume2
 	def initiate
 			hud
@@ -49,6 +48,10 @@ class Volume2
 			
 		puts "It misses!"
 		end
+		puts "You quickly shove the servent of evil off then run over to a wonded guard."
+		puts "The guard nearbye thanks you, gifting you with 100₨"
+		$cash += 100
+		puts
 	end
 
 	def townsquare
@@ -84,15 +87,18 @@ class Volume2
 				clear
 				townsquare
 			elsif choice == "gates" or choice == "Gates"
-					clear
-					gates
+				clear
+				gates
 			else	
 				clear
 				townsquare		
 			end
 	end
-	
+	def gate
+		
+	end
 end
+
 #stats
 $ac = 0
 $atcsppeed = 0
@@ -107,6 +113,7 @@ $randgedatcspeed = 0
 $sheilddef = 0
 $speed = 0
 $stamina = 0
+
 #advanced stats
 $armorname = ""
 $arrows = 20
@@ -114,11 +121,13 @@ $bow = "Commoner's shortbow"
 $cash = 0
 $race = ""
 $weapon = ""
+
 #runes
 $totalrunes = 0
 $dr = 0
 $hr = 0
 $pr = 0
+
 #stats so advanced you won't use often them until volume 20
 $magedamadge = 0
 $mageacuracy = 0
