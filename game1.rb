@@ -614,26 +614,28 @@ def segment1
 	puts <<~PlayerSelect
 	
 
-	Human:
+	1. Human:
 	defense = 5
 	speed = 8
 	stamina = 12
 
-	🗡Elf:
+	2. 🗡Elf:
 	defense = 3
 	speed = 11
 	stamina = 10
 
 	Elvish bow mastery: you gain a ranged attack speed  of 2
 
-	💎Dwarf:
+
+	3. 💎Dwarf:
 	defense = 11
 	speed = 3
 	stamina = 10
 
 	Dwarvish strength: you gain at base attack of 2
 
-	🎲Hobbit:
+
+	4. 🎲Hobbit:
 	defense = 11
 	speed = 11
 	stamina = 3
@@ -643,29 +645,29 @@ def segment1
 	
 	PlayerSelect
 	print "[{1}]:"
-	$race = gets
-	$race = $race.chomp
+	$race = gets.chomp
 
-	#establishes an if statement
-	if $race.downcase == "elf"
+	#Race select
+	case $race.downcase
+	when "1", "human"
+		$race = "Human"
+		$defense = 5
+		$speed = 8
+		$stamina = 12
+	when "2", "elf"
+		$race = "Elf"
 		$defense = 3
 		$speed = 12
 		$stamina = 10
 		$randgedatcspeed = 2
-
-	elsif $race.downcase == "human"
-		$defense = 5
-		$speed = 8
-		$stamina = 12
-
-
-	elsif $race.downcase == "dwarf"
+	when "3", "dwarf"
+		$race = "Dwarf"
 		$defense = 12
 		$speed = 3
 		$stamina = 10
 		$baseatc = 2
-
-	elsif $race.downcase == "hobbit"
+	when "4", "hobbit"
+		$race = "Hobbit"
 		$defense = 11
 		$speed = 10
 		$stamina = 3
@@ -674,7 +676,6 @@ def segment1
 	else
 		clear
 		segment1
-
 	end
 end
 
@@ -683,53 +684,59 @@ segment1
 clear
 def segment2
 
-	puts "Now, " + $player_name + " The " + $race + ", what melee weapon do you prefer. If it is not there, do not worry, you will find weapons later in your adventures. In addition to this weapon, you will gain a Commoner's bow (ranged attack: 5), and 20 normal arrows 
+	puts "Now, " + $player_name + " The " + $race + ", what melee weapon do you prefer. If it is not there, do not worry, you will find weapons later in your adventures. In addition to this weapon, you will gain a Commoner's bow (ranged attack: 5), and 20 normal arrows"
 
-	Commoner's longsword:
+	puts <<~WeaponSelect
+
+	1. Commoner's longsword:
 	attack: 5
 	attack speed: 2
 
-	Commoner's daggers:
+	2. Commoner's daggers:
 	attack: 2
 	attack speed: 5
 
-	Commoner's claymore: 
+	3. Commoner's claymore: 
 	attack: 10
 	attack speed: 1
 
-	Commoner's lance: 
+	4. Commoner's lance: 
 	attack: 3
 	attack speed: 3
 
-	Commoner's shortsword:
+	5. Commoner's shortsword:
 	attack: 4
 	attack speed: 2.5
-	"
-	print "[{1}]:"
-	$weapon = gets
-	$weapon = $weapon.chomp
 
+	WeaponSelect
+	print "[{1}]:"
+	$weapon = gets.chomp
+
+	# Weapon Select
 	case $weapon.downcase
-	when "commoner's daggers", "dagger"
-		$attack = 5
-		$atcsppeed = 2
-	when "commoner's longsword", "longsword"
+	when "1", "commoner's longsword", "longsword"
+		$weapon = "Commoner's longsword"
 		$attack = 2
 		$atcsppeed = 5
-	when "commoner's claymore", "claymore"
+	when "2", "commoner's daggers", "dagger"
+		$weapon = "Commoner's daggers"
+		$attack = 5.1
+		$atcsppeed = 2
+	when "3", "commoner's claymore", "claymore"
+		$weapon = "Commoner's claymore"
 		$attack = 10
 		$atcsppeed = 1
-	when "commoner's lance", "lance"
+	when "4", "commoner's lance", "lance"
+		$weapon = "Commoner's lance"
 		$attack = 3
 		$atcsppeed = 3
-	when "commoner's shortsword", "shortsword"
+	when "5", "commoner's shortsword", "shortsword"
+		$weapon = "Commoner's shortsword"
 		$attack = 4
 		$atcsppeed = 2.5
-
 	else
 		clear
 		segment2
-
 	end
 end
 
