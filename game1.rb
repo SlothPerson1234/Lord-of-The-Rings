@@ -97,11 +97,36 @@ class Volume2
 
 	def gate
 		hud
-		puts ""
+		puts "You run to the gate. An Uruk apears. A soldier is laying injured nearbye. Do you attack with your melee or bow?"
+		print "[{2}]:"
+		gets
+		clear
+		hud
+		puts "You hit the Uruk. It falls dead. It has a bow of Ulthmath."
+		puts "Now, do you take the weapon, or keep your old weapon?"
+		puts "options:"
+		puts "Take"
+		puts "Keep"
+		print "[{2}]:"
+		choice2 = gets.chomp
+
+		if choice1 == "Take" or choice1 == "take"
+			hud
+			puts "You take the weapon"
+			$rangedatc = 5
+			$randgedatcspeed = 3
+			$bow = "bow of Ulthmath"
+		
+		else
+			hud
+			puts "Too bad🙁."
+			puts "I hope you don't regret your choice in the future."
+		end
+		tower
 	end
 
 	def tower
-		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks,"
+		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks, then it opens a third eye on its forehead. You run up to the tower, the dragon knocks you off. You faint, and are scooped up by the dragon."
 	end
 end
 
@@ -127,6 +152,7 @@ $bow = "Commoner's shortbow"
 $cash = 0
 $race = ""
 $weapon = ""
+$rank = 0
 
 #runes
 $totalrunes = 0
@@ -867,4 +893,10 @@ puts ""
 hint1 = rand(10)
 hints(hint1)
 puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.You climb the ladder'
-
+v2 = Volume2.new
+puts ""
+puts "Volume 3:"
+puts "The Castle of the Warlord"
+puts "Difficulty: Absulute Beginner"
+puts ""
+hint1 = rand(10)

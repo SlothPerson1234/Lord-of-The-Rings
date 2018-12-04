@@ -1,0 +1,19 @@
+puts "Now, do you take the weapon, or keep your old weapon?"
+puts "options:"
+puts "Take"
+puts "Keep"
+print "[{?}]:"
+choice2 = gets.chomp
+
+if choice1 == "Take" or choice1 == "take"
+	puts "You take the weapon"
+	$attack = ?
+	$attackspeed = ?
+	$weapon = "weapon"
+		
+else
+	puts "Too bad🙁."
+	puts "I hope you don't regret your choice in the future."
+end
+
+print "[{?}]:"
