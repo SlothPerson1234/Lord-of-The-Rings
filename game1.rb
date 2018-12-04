@@ -101,7 +101,7 @@ class Volume2
 	end
 
 	def tower
-		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows."
+		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks,"
 	end
 end
 
@@ -776,10 +776,10 @@ if true
 
 end
 puts "Volume 1:"
-puts "The Journy to Gondor"
+puts "The Journy to Minas Tirith"
 puts "Difficulty: Tutorial"
 
-puts "	You are traveling as an escort to Gondor, protecting a wealthy dwarf merchant. This party is following an old trail just south of the main rode.
+puts "	You are traveling as an escort to Minas Tirith, protecting a wealthy dwarf merchant. This party is following an old trail just south of the main rode.
 The merchant belives that it will be safer, with less risk of bandits."
 puts "	Suddenly, 2 orcs jump out of the bushes. They are unarmed. The merchent flees. What do you do?"
 puts "Defend"
@@ -857,11 +857,11 @@ else
 	abort
 end
 
-puts "Soon, you arrive at the gates of Gonder, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
+puts "Soon, you arrive at the gates of Minas Tirith, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
 
 puts ""
 puts "Volume 2:"
-puts "The Seige of Gondor"
+puts "The Seige of Minas Tirith"
 puts "Difficulty: Absulute Beginner"
 puts ""
 hint1 = rand(10)
