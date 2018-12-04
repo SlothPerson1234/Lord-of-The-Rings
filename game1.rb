@@ -51,7 +51,7 @@ class Volume2
 		puts "You quickly shove the servent of evil off then run over to a wonded guard."
 		puts "The guard nearbye thanks you, gifting you with 100₨"
 		$cash += 100
-		puts
+		tower
 	end
 
 	def townsquare
@@ -94,8 +94,14 @@ class Volume2
 				townsquare		
 			end
 	end
+
 	def gate
-		
+		hud
+		puts ""
+	end
+
+	def tower
+		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows."
 	end
 end
 
