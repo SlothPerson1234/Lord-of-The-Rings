@@ -1,5 +1,3 @@
-# Lord of The Rings
-
 This is a text adventure game exploring the land of Middle-Earth. 
 
 ## Gameplay
@@ -17,6 +15,14 @@ If it took place in the third age, the adventure would begin along the river lab
 
 ## Code
 This project is written in basic ruby.
+
+## Major Updates
+
+| Update | Info |
+| ------------- | ------------- |
+| 1, Boromir | Volume 2 complete, asests added, along with this table. |
+| 2, Golum | To comence upon completeing volume 3 |
+
 
 ### Please Enjoy this Game, and remember:
 >Not all those who wander are lost
