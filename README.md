@@ -4,7 +4,7 @@ This is a text adventure game exploring the land of Middle-Earth.
 
 ## Gameplay
 (Warning: this game is non-canon) It begins in about SA 1500, when Sauron instructs the forging of the Rings of Power. The game is riddled with secrets and references to the traditional and nontraditional Middle-Earth fiction. It follows the plots of the dark-wizard, Fairûman, who would later become the embodiment of Sauron, and his corrupt dragon,  Ulthmath, who is encountered in volume 2 in the rubble of Minas Tirith. You become an assassin in the Gondorian army after escaping the lair of a goblin warlord, and then are sent on countless missions to destroy powerful foes.
-![White tree of gondor](https://lh3.googleusercontent.com/-tyRXUwJylu0/WPBftUEXTQI/AAAAAAAAV0M/9rldFZxhRAIEG9bW7NaMEe9lvnsM-1b7gCJoC/w2000-h2200/Gondor_Emblem.png)
+![White tree of gondor](https://ugc.kn3.net/i/760x/https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Blason_Gondor.svg/2000px-Blason_Gondor.svg.png)
 
 ## Difficulty
 This is planed to be at first, a relatively easy game, and then its difficulty progresses according to the gameplay.
