@@ -3,7 +3,7 @@
 This is a text adventure game exploring the land of Middle-Earth. 
 
 ## Gameplay
-(Warning: this game is non-canon) It begins in about SA 1500, when Sauron instructs the forging of the Rings of Power. The game is riddled with secerets and references to the traditional and untraditional Midle-Earth fiction. It follows the plots of the dark-wizard, Fairûman, who would later become the embodyment of Sauron, and his corupt dragon,  Ulthmath, who is encounterd in volume 2 in the ruble of Minas Tirith. You become an assasin in the Gondorian army after escaping the lair of a goblin warlord, and then are sent on countless missions to destroy powerfuull foes.
+(Warning: this game is non-canon) It begins in about SA 1500, when Sauron instructs the forging of the Rings of Power. The game is riddled with secerets and references to the traditional and untraditional Midle-Earth fiction. It follows the plots of the dark-wizard, Fairûman, who would later become the embodyment of Sauron, and his corupt dragon,  Ulthmath, who is encounterd in volume 2 in the ruble of Minas Tirith. You become an assasin in the Gondorian army after escaping the lair of a goblin warlord, and then are sent on countless missions to destroy powerfull foes.
 
 ## Difficulty
 This is planed to be at first, a relativley easy game, and then its difficulty progresses acording to the gameplay.
