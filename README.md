@@ -13,7 +13,7 @@ This is planed to be at first, a relatively easy game, and then its difficulty p
 ## Location
 If it took place in the third age, the adventure would begin along the river labeled Ciril, the Goblin Warlord's lair being found in the Ephel Duath, being found about halfway inbetween the Crossings of Poros and the Sea of Nurnen.
 
-![Map of Middle Earth](http://ewach.info/wp-content/uploads/2017/12/map-of-middle-earth-wallpapers-wallpaper-cave-intended-for-dimensions-1920-x-1080.jpg)
+>![Map of Middle Earth](https://i.imgur.com/VNYqEcp.jpg)
 
 ## Code
 This project is written in basic ruby.
