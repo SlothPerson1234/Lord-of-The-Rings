@@ -1,4 +1,3 @@
-
 class Volume2
 	def initiate
 			hud
@@ -768,7 +767,7 @@ if true
 
 	#Combine all sentences into single array
 	intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
-	
+
 	#For each sentence...
 	intro.each do |sentence|
 		#...split each char into an array indecie, and then run loop on every indecie.
@@ -780,8 +779,6 @@ if true
 		timer(2)
 		clear
 	end
-
-
 end
 puts "Volume 1:"
 puts "The Journy to Gondor"
