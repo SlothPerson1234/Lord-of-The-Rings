@@ -626,7 +626,18 @@ clear
 
 
 
-puts "Before the Rings"
+puts '               
+       / \    )\__/(     / \       
+      /   \  (_\  /_)   /   \      
+ ____/_____\__\@  @/___/_____\____ 
+|             |\../|              |
+|              \VV/               |
+|         Before The Rings        |
+|_________________________________|
+ |    /\ /      ((       \ /\    | 
+ |  /   V        ))       V   \  | 
+ |/     `       //              \| 
+ `              V                '
 puts "Please type names and commands exactly as said."
 puts "For the best expirience, play in full screen."
 puts "Click control =. Do so again 9 times"
