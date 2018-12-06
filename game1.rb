@@ -126,7 +126,7 @@ class Volume2
 	end
 
 	def tower
-		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks, then it opens a third eye on its forehead. You run up to the tower, the dragon knocks you off. You faint, and are scooped up by the dragon."
+		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks, then it opens a third yellow blood shot eye eye on its forehead. You run up to the tower, the dragon knocks you off. You faint, and are scooped up by the dragon."
 	end
 end
 

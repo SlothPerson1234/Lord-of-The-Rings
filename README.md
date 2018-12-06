@@ -20,7 +20,7 @@ This project is written in basic ruby.
 
 | Update | Info |
 | ------------- | ------------- |
-| 1, Boromir | Volume 2 complete, asests added, along with this table. |
+| 1, Boromir | Volume 2 complete, asests added, along with this table. 903 lines of code complete|
 | 2, Golum | To comence upon completeing volume 3 |
 
 
