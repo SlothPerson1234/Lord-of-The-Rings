@@ -1,22 +1,33 @@
-# Lord of The Rings
 
+# The Lord of The Rings: Before The Rings
 This is a text adventure game exploring the land of Middle-Earth. 
+
 ## Gameplay
-It begins in about SA 1500, when Sauron instructs the forging of the Rings of Power. The game is riddled with secerets and references to the traditional and untraditional Midle-Earth fiction. It follows the plots of the dark-wizard, Fairûman, who would later become the embodyment of Sauron (Warning: this information is non-canon). You become an assasin in the Gondorian army after escaping the lair of a goblin warlord, and then are sent on countless missions to destroy powerfuull foes.
+(Warning: this game is non-canon) It begins in about SA 1500, when Sauron instructs the forging of the Rings of Power. The game is riddled with secrets and references to the traditional and nontraditional Middle-Earth fiction. It follows the plots of the dark-wizard, Fairûman, who would later become the embodiment of Sauron, and his corrupt dragon,  Ulthmath, who is encountered in volume 2 in the rubble of Minas Tirith. You become an assassin in the Gondorian army after escaping the lair of a goblin warlord, and then are sent on countless missions to destroy powerful foes.
+
+>![White tree of gondor](http://des-livres-de-magies.fr/wp-content/uploads/2017/11/220px-Blason_Gondor.svg_.png)
 
 ## Difficulty
-This is planed to be at first, a relativley easy game, and then its difficulty progresses acording to the gameplay.
+This is planed to be at first, a relatively easy game, and then its difficulty progresses according to the gameplay.
 
 ## Location
 If it took place in the third age, the adventure would begin along the river labeled Ciril, the Goblin Warlord's lair being found in the Ephel Duath, being found about halfway inbetween the Crossings of Poros and the Sea of Nurnen.
 
-![Map of Middle Earth](http://ewach.info/wp-content/uploads/2017/12/map-of-middle-earth-wallpapers-wallpaper-cave-intended-for-dimensions-1920-x-1080.jpg)
+>![Map of Middle Earth](https://i.imgur.com/VNYqEcp.jpg)
 
 ## Code
 This project is written in basic ruby.
 
+## Major Updates
+
+| Update | Info |
+| ------------- | ------------- |
+| 1, Boromir | Volume 2 complete, asests added, along with this table. 903 lines of code complete|
+| 2, Golum | To comence upon completeing volume 3 |
+
+
 ### Please Enjoy this Game, and remember:
->Not all thoses who wander are lost
+>Not all those who wander are lost
 
 ![Elvish not all those who wander are lost](http://i.imgur.com/nItllTU.jpg)
 

@@ -50,7 +50,7 @@ class Volume2
 		puts "You quickly shove the servent of evil off then run over to a wonded guard."
 		puts "The guard nearbye thanks you, gifting you with 100₨"
 		$cash += 100
-		puts
+		tower
 	end
 
 	def townsquare
@@ -93,8 +93,39 @@ class Volume2
 				townsquare		
 			end
 	end
+
 	def gate
+		hud
+		puts "You run to the gate. An Uruk apears. A soldier is laying injured nearbye. Do you attack with your melee or bow?"
+		print "[{2}]:"
+		gets
+		clear
+		hud
+		puts "You hit the Uruk. It falls dead. It has a bow of Ulthmath."
+		puts "Now, do you take the weapon, or keep your old weapon?"
+		puts "options:"
+		puts "Take"
+		puts "Keep"
+		print "[{2}]:"
+		choice2 = gets.chomp
+
+		if choice1 == "Take" or choice1 == "take"
+			hud
+			puts "You take the weapon"
+			$rangedatc = 5
+			$randgedatcspeed = 3
+			$bow = "bow of Ulthmath"
 		
+		else
+			hud
+			puts "Too bad🙁."
+			puts "I hope you don't regret your choice in the future."
+		end
+		tower
+	end
+
+	def tower
+		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks, then it opens a third yellow blood shot eye eye on its forehead. You run up to the tower, the dragon knocks you off. You faint, and are scooped up by the dragon."
 	end
 end
 
@@ -120,6 +151,7 @@ $bow = "Commoner's shortbow"
 $cash = 0
 $race = ""
 $weapon = ""
+$rank = 0
 
 #runes
 $totalrunes = 0
@@ -593,7 +625,18 @@ clear
 
 
 
-puts "Before the Rings"
+puts '               
+       / \    )\__/(     / \       
+      /   \  (_\  /_)   /   \      
+ ____/_____\__\@  @/___/_____\____ 
+|             |\../|              |
+|              \VV/               |
+|         Before The Rings        |
+|_________________________________|
+ |    /\ /      ((       \ /\    | 
+ |  /   V        ))       V   \  | 
+ |/     `       //              \| 
+ `              V                '
 puts "Please type names and commands exactly as said."
 puts "For the best expirience, play in full screen."
 puts "Click control =. Do so again 9 times"
@@ -621,33 +664,24 @@ def segment1
 	puts "Now, "+ $player_name + ", what is your race?"
 	puts <<~PlayerSelect
 	
-
 	1. Human:
 	defense = 5
 	speed = 8
 	stamina = 12
-
 	2. 🗡Elf:
 	defense = 3
 	speed = 11
 	stamina = 10
-
 	Elvish bow mastery: you gain a ranged attack speed  of 2
-
-
 	3. 💎Dwarf:
 	defense = 11
 	speed = 3
 	stamina = 10
-
 	Dwarvish strength: you gain at base attack of 2
-
-
 	4. 🎲Hobbit:
 	defense = 11
 	speed = 11
 	stamina = 3
-
 	Hobbit health: your hp goes up by 2
 	
 	
@@ -695,27 +729,21 @@ def segment2
 	puts "Now, " + $player_name + " The " + $race + ", what melee weapon do you prefer. If it is not there, do not worry, you will find weapons later in your adventures. In addition to this weapon, you will gain a Commoner's bow (ranged attack: 5), and 20 normal arrows"
 
 	puts <<~WeaponSelect
-
 	1. Commoner's longsword:
 	attack: 5
 	attack speed: 2
-
 	2. Commoner's daggers:
 	attack: 2
 	attack speed: 5
-
 	3. Commoner's claymore: 
 	attack: 10
 	attack speed: 1
-
 	4. Commoner's lance: 
 	attack: 3
 	attack speed: 3
-
 	5. Commoner's shortsword:
 	attack: 4
 	attack speed: 2.5
-
 	WeaponSelect
 	print "[{1}]:"
 	$weapon = gets.chomp
@@ -755,6 +783,7 @@ puts "So you wish to use the " + $weapon + "? Interesting choice. Now to begin..
 timer(2)
 clear
 
+
 #open this for seizure	
 if true
 	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
@@ -781,10 +810,10 @@ if true
 	end
 end
 puts "Volume 1:"
-puts "The Journy to Gondor"
+puts "The Journy to Minas Tirith"
 puts "Difficulty: Tutorial"
 
-puts "	You are traveling as an escort to Gondor, protecting a wealthy dwarf merchant. This party is following an old trail just south of the main rode.
+puts "	You are traveling as an escort to Minas Tirith, protecting a wealthy dwarf merchant. This party is following an old trail just south of the main rode.
 The merchant belives that it will be safer, with less risk of bandits."
 puts "	Suddenly, 2 orcs jump out of the bushes. They are unarmed. The merchent flees. What do you do?"
 puts "Defend"
@@ -862,14 +891,20 @@ else
 	abort
 end
 
-puts "Soon, you arrive at the gates of Gonder, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
+puts "Soon, you arrive at the gates of Minas Tirith, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
 
 puts ""
 puts "Volume 2:"
-puts "The Seige of Gondor"
+puts "The Seige of Minas Tirith"
 puts "Difficulty: Absulute Beginner"
 puts ""
 hint1 = rand(10)
 hints(hint1)
 puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.You climb the ladder'
-
+v2 = Volume2.new
+puts ""
+puts "Volume 3:"
+puts "The Castle of the Warlord"
+puts "Difficulty: Absulute Beginner"
+puts ""
+hint1 = rand(10)
