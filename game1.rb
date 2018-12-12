@@ -787,7 +787,7 @@ clear
 
 
 #open this for seizure	
-if true && $player_name != "skip"
+if true && $player_name.downcase != "skip"
 	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
 	sentence2 = "One day a powerful wizard took pity on the town."
 	sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
@@ -821,15 +821,13 @@ puts "	Suddenly, 2 orcs jump out of the bushes. They are unarmed. The merchent f
 puts "Defend"
 puts "Attack"
 print "[{1}]:"
-battle1 = gets
-battle1 = battle1.chomp
+battle1 = gets.chomp
 clear
-if battle1 == "defend" or battle1 == "Defend"
+case battle1.downcase
+	when "defend"
 	puts "Your defense causes you to find an opening. You slice the orc's heads off with one blow."
-	print;
-elsif battle1 == "attack" or battle1 == "Attack"
+when "attack"
 	puts "You unleash a flurry of attacks which leave the orcs laying unconsioce on the ground. You quickly finish the job."
-	print;
 else
 	puts "☠️You stand their mumbiling to your self. The orcs murder you. They carve an eye on your forehead and begin to loot your body. Come back when 
 	you know how to play this game.☠️"
@@ -840,13 +838,13 @@ puts "Behind you is a single Oruk-Hai riding a horse. You mount the rich man's s
 puts "Ride"
 puts "Attack"
 print "[{1}]:"
-battle2 = gets
-battle2 = battle2.chomp
+battle2 = gets.chomp
+battle2 = battle2
 clear
-if battle2 =="Ride" or battle2 == "ride"
+case battle2.downcase
+when "ride"
 	puts "You ride vigorously until you see the blooming tree of Gondor. The Oruk-Hai whistles. 29 more appear."
-	
-elsif battle2 == "Attack" or battle2 == "attack"
+when "attack"
 	$arrows -= 1
 	puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
 	puts "current ac: " + $aurmor
