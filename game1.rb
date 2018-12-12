@@ -787,7 +787,7 @@ clear
 
 
 #open this for seizure	
-if true
+if true && $player_name != "skip"
 	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
 	sentence2 = "One day a powerful wizard took pity on the town."
 	sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
