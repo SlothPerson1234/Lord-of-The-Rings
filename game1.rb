@@ -1,4 +1,3 @@
-
 class Volume2
 	def initiate
 			hud
@@ -175,28 +174,31 @@ end
 
 def hints(hint)
 	print "Hint: "
-	if hint == 0
+	case hint
+	when 0
 		puts "The difficulty depends on how much freedom you have and the estimated rate of death."
-	elsif hint == 1
+	when 1
 		puts "On your HUD, on a non-tutorial volume, you can see your cash (₨), "
-	elsif hint == 2
+	when 2
 		puts "Some times, you can do a unsaid action and reap bonus rewards. Often these actions are references to LOTR or the Hobbit."
-	elsif hint == 3
+	when 3
 		puts "Often, at the begining of a volume, you can find ways to restore your current hp."
-	elsif hint == 4
+	when 4
 		puts "Some times, you can take a different rout than was instructed and encounter less or more enemys."
-	elsif hint == 5
+	when 5
 		puts "Sometimes, take a different approach, rather than your usual one."
-	elsif hint == 6
+	when 6
 		puts "If you run low on arrows, you can buy them at a store (in areas before you continue on your curent quest) along with sheilds, armor, and very expensive runes, that raise your base stats."
-	elsif hint == 7
+	when 7
 		puts "Some enemys will die imeadiatly if you hit them with fire."
-	elsif hint == 8
+	when 8
 		puts "Some enemys will die imeadiatly if you hit them with ice."
-	elsif hint == 9
+	when 9
 		puts "All enemys will be stunned if you hit them with a magical attack."
-	elsif hint == 10
+	when 10
 		puts "Some places have secret areas which you can reap for loot if you notice a suspicious thing, you can investigate, but warning, if you fail any thing, you will die."
+	else
+		puts "Missing a hint number?"
 	end
 end	
 				
@@ -637,11 +639,13 @@ puts '
  |    /\ /      ((       \ /\    | 
  |  /   V        ))       V   \  | 
  |/     `       //              \| 
- `              V                '
-puts "Please type names and commands exactly as said."
-puts "For the best expirience, play in full screen."
-puts "Click control =. Do so again 9 times"
-puts "Do you wish to play?"
+ `              V                `'
+puts <<~intro
+Please type names and commands exactly as said.
+For the best expirience, play in full screen.
+Click control =. Do so again 9 times
+Do you wish to play?
+intro
 print "🌾: "
 play = gets.chomp.to_s
 if play == "yes" or play == "Yes"
@@ -786,7 +790,7 @@ clear
 
 
 #open this for seizure	
-if true
+if true && $player_name.downcase != "skip"
 	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
 	sentence2 = "One day a powerful wizard took pity on the town."
 	sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
@@ -797,7 +801,7 @@ if true
 
 	#Combine all sentences into single array
 	intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
-	
+
 	#For each sentence...
 	intro.each do |sentence|
 		#...split each char into an array indecie, and then run loop on every indecie.
@@ -809,8 +813,6 @@ if true
 		timer(2)
 		clear
 	end
-
-
 end
 puts "Volume 1:"
 puts "The Journy to Minas Tirith"
@@ -822,15 +824,13 @@ puts "	Suddenly, 2 orcs jump out of the bushes. They are unarmed. The merchent f
 puts "Defend"
 puts "Attack"
 print "[{1}]:"
-battle1 = gets
-battle1 = battle1.chomp
+battle1 = gets.chomp
 clear
-if battle1 == "defend" or battle1 == "Defend"
+case battle1.downcase
+	when "defend"
 	puts "Your defense causes you to find an opening. You slice the orc's heads off with one blow."
-	print;
-elsif battle1 == "attack" or battle1 == "Attack"
+when "attack"
 	puts "You unleash a flurry of attacks which leave the orcs laying unconsioce on the ground. You quickly finish the job."
-	print;
 else
 	puts "☠️You stand their mumbiling to your self. The orcs murder you. They carve an eye on your forehead and begin to loot your body. Come back when 
 	you know how to play this game.☠️"
@@ -841,16 +841,16 @@ puts "Behind you is a single Oruk-Hai riding a horse. You mount the rich man's s
 puts "Ride"
 puts "Attack"
 print "[{1}]:"
-battle2 = gets
-battle2 = battle2.chomp
+battle2 = gets.chomp
+battle2 = battle2
 clear
-if battle2 =="Ride" or battle2 == "ride"
+case battle2.downcase
+when "ride"
 	puts "You ride vigorously until you see the blooming tree of Gondor. The Oruk-Hai whistles. 29 more appear."
-	
-elsif battle2 == "Attack" or battle2 == "attack"
+when "attack"
 	$arrows -= 1
 	puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
-	puts "current ac: " + $aurmor
+	puts "current ac: " + $armour
 	puts "armour's ac: 9"
 	puts "current armour name: " + $armourname
 	puts "options:"
@@ -862,7 +862,7 @@ elsif battle2 == "Attack" or battle2 == "attack"
 	if choice1 == "Take" or choice1 == "take"
 		puts "You dawn the armor"
 		$ac = 9
-		$aurmorname = "Eye of Sauron Oruk-Hai armor"
+		$armourname = "Eye of Sauron Oruk-Hai armor"
 		
 	else
 		puts "Too bad🙁."
