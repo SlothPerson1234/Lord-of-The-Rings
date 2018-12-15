@@ -578,6 +578,7 @@ end
 
 def inn(name)
   puts "\e[H\e[2J"
+  heal_by = 10
   room_cost = 5
   luxury_room_cost = 10
   leave = false
@@ -595,13 +596,21 @@ def inn(name)
     puts "\e[H\e[2J"
     case choice.downcase
     when "1", "luxury", "luxury room"
-      $currenthp += 20
-      $cash -= 10
-      puts "You slept well"
+      unless $cash < luxury_room_cost 
+        $currenthp += heal_by
+        $cash -= luxury_room_cost
+        puts "You slept well"
+      else
+        puts "Not enough money!"
+      end
     when "2", "room"
-      $currenthp += 10  
-      $cash -= 5
-      puts "You slept well"
+      unless $cash < room_cost 
+        $currenthp += heal_by  
+        $cash -= room_cost
+        puts "You slept well"
+      else
+        puts "Not enough money!"
+      end
     when "3", "leave"
       puts "See ya"
       leave = true
@@ -617,7 +626,7 @@ clear
 puts '               
        / \    )\__/(     / \       
       /   \  (_\  /_)   /   \      
- ____/_____\__\$  $/___/_____\____ 
+ ____/_____\__\@  @/___/_____\____ 
 |             |\../|              |
 |              \VV/               |
 |         Before The Rings        |
