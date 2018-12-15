@@ -34,11 +34,11 @@ class Volume2
 		hud
 		puts "You run to shove the ladder. An ork jumps off, attempting to hit you with a saber."
 		h = rand(20)
-		if rand + 5 >= @defense + @ac
+		if rand + 5 >= $defense + $ac
 			puts "It hits!"
 			d = rand(10) + 1
-			@currenthp -= d
-			if  @currenthp <= 0
+			$currenthp -= d
+			if  $currenthp <= 0
 				puts "You die"
 				v1d
 
@@ -49,7 +49,7 @@ class Volume2
 		end
 		puts "You quickly shove the servent of evil off then run over to a wonded guard."
 		puts "The guard nearbye thanks you, gifting you with 100₨"
-		@cash += 100
+		$cash += 100
 		tower
 	end
 
@@ -77,7 +77,7 @@ class Volume2
 				townsquare
 			elsif choice == "Climb The Tree" or choice == "climb the tree"
 				clear
-				@cash += 5000000000000000000000000000000000000000000000000000000000
+				$cash += 5000000000000000000000000000000000000000000000000000000000
 				puts "You find an insane amount of cash."
 				townsquare
 			elsif choice == "shop" or choice == "Shop"
@@ -112,9 +112,9 @@ class Volume2
 		if choice1 == "Take" or choice1 == "take"
 			hud
 			puts "You take the weapon"
-			@rangedatc = 5
-			@randgedatcspeed = 3
-			@bow = "bow of Ulthmath"
+			$rangedatc = 5
+			$randgedatcspeed = 3
+			$bow = "bow of Ulthmath"
 		
 		else
 			hud
@@ -130,39 +130,39 @@ class Volume2
 end
 
 #stats
-@ac = 0
-@atcsppeed = 0
-@attack = 0
-@baseatc = 0
-@defense = 0
-@hp = 10
-@currenthp = @hp
-@player_name= ""
-@randgedatc = 5
-@randgedatcspeed = 0
-@sheilddef = 0
-@speed = 0
-@stamina = 0
+$ac = 0
+$atcsppeed = 0
+$attack = 0
+$baseatc = 0
+$defense = 0
+$hp = 10
+$currenthp = $hp
+$player_name= ""
+$randgedatc = 5
+$randgedatcspeed = 0
+$sheilddef = 0
+$speed = 0
+$stamina = 0
 
 #advanced stats
-@armorname = ""
-@arrows = 20
-@bow = "Commoner's shortbow"
-@cash = 0
-@race = ""
-@weapon = ""
-@rank = 0
+$armorname = ""
+$arrows = 20
+$bow = "Commoner's shortbow"
+$cash = 0
+$race = ""
+$weapon = ""
+$rank = 0
 
 #runes
-@totalrunes = 0
-@dr = 0
-@hr = 0
-@pr = 0
+$totalrunes = 0
+$dr = 0
+$hr = 0
+$pr = 0
 
 #stats so advanced you won't use often them until volume 20
-@magedamadge = 0
-@mageacuracy = 0
-@magedef = 0
+$magedamadge = 0
+$mageacuracy = 0
+$magedef = 0
 
 def clear
 	puts "\e[H\e[2J"
@@ -204,14 +204,14 @@ end
 				
 def hud
 		
-		puts "HP: " + @hp.to_s + "/" + @currenthp.to_s + " " + "Money: " + @cash.to_s + "₨ Armor: " + @armorname + "Weapon: " + @weapon + "																		" + "Runes: " + @totalrunes.to_s
+		puts "HP: " + $hp.to_s + "/" + $currenthp.to_s + " " + "Money: " + $cash.to_s + "₨ Armor: " + $armorname + "Weapon: " + $weapon + "																		" + "Runes: " + $totalrunes.to_s
 		
 end	
 	
 
 
 def shop2(shopname)
-	puts "Money: ₨" + @cash.to_s
+	puts "Money: ₨" + $cash.to_s
 
 	puts "Wares:"
 	puts "Arrow: ₨1"
@@ -231,108 +231,108 @@ def shop2(shopname)
 	print "}~" + shopname + "~{:"
 	purchase = gets.chomp
 
-	if (purchase == "Arrow" and @cash >= 1) or (purchase == "arrow" and @cash >= 1)
-		@cash -= 1
-		@arrows += 1
+	if (purchase == "Arrow" and $cash >= 1) or (purchase == "arrow" and $cash >= 1)
+		$cash -= 1
+		$arrows += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 arrow. You now have " + @arrows + " arrows."
+		puts "You bought 1 arrow. You now have " + $arrows + " arrows."
 		shop2(shopname)
 		
-	elsif (purchase == "Arrows" and @cash >= 9) or (purchase == "arrows" and @cash >= 9) or (purchase == "arrows, 10" and @cash >= 9) or (purchase == "Arrows, 10" and @cash >= 9) or (purchase == "10 arrows" and @cash >= 9) or (purchase == "10 Arrows" and @cash >= 9)
-		@cash -= 9
-		@arrows += 10
+	elsif (purchase == "Arrows" and $cash >= 9) or (purchase == "arrows" and $cash >= 9) or (purchase == "arrows, 10" and $cash >= 9) or (purchase == "Arrows, 10" and $cash >= 9) or (purchase == "10 arrows" and $cash >= 9) or (purchase == "10 Arrows" and $cash >= 9)
+		$cash -= 9
+		$arrows += 10
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 10 arrows. You now have " + @arrows + " arrows."
+		puts "You bought 10 arrows. You now have " + $arrows + " arrows."
 		shop2(shopname)
 
-	elsif (purchase == "Rune of Health" and @cash >= 10000) or (purchase == "rune of health" and @cash >= 10000)
-		@cash -= 10000
-		@hp += 10
-		@currenthp = @hp
-		@totalrunes += 1
-		@hr += 1
+	elsif (purchase == "Rune of Health" and $cash >= 10000) or (purchase == "rune of health" and $cash >= 10000)
+		$cash -= 10000
+		$hp += 10
+		$currenthp = $hp
+		$totalrunes += 1
+		$hr += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune of health. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune of health. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Rune of Power" and @cash >= 10000) or (purchase == "rune of power" and @cash >= 10000)
-		@cash -= 10000
-		@baseatc += 10
-		@totalrunes += 1
-		@pr += 1
+	elsif (purchase == "Rune of Power" and $cash >= 10000) or (purchase == "rune of power" and $cash >= 10000)
+		$cash -= 10000
+		$baseatc += 10
+		$totalrunes += 1
+		$pr += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune of power. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune of power. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Rune of Defense" and @cash >= 10000) or (purchase == "rune of defense" and @cash >= 10000)
-		@cash -= 10000
-		@basedef += 10
-		@totalrunes += 1
-		@dr += 1
+	elsif (purchase == "Rune of Defense" and $cash >= 10000) or (purchase == "rune of defense" and $cash >= 10000)
+		$cash -= 10000
+		$basedef += 10
+		$totalrunes += 1
+		$dr += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune of defense. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune of defense. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Rune Bundle" and @cash >= 50000) or (purchase == "rune bundle" and @cash >= 50000)
-		@cash -= 50000
-		@basedef += 20
-		@totalrunes += 6
-		@dr += 2
-		@baseatc += 20
-		@pr += 2
-		@hr += 2
-		@hp += 10
-		@currenthp = @hp
+	elsif (purchase == "Rune Bundle" and $cash >= 50000) or (purchase == "rune bundle" and $cash >= 50000)
+		$cash -= 50000
+		$basedef += 20
+		$totalrunes += 6
+		$dr += 2
+		$baseatc += 20
+		$pr += 2
+		$hr += 2
+		$hp += 10
+		$currenthp = $hp
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune bundle. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune bundle. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Basic Mage Training" and @cash >= 666666) or (purchase == "basic mage Training" and @cash >= 666666)
-		@magedamadge += 10
-		@mageacuracy += 10
-		@magedef += 10
-		@cash -= 666666
+	elsif (purchase == "Basic Mage Training" and $cash >= 666666) or (purchase == "basic mage Training" and $cash >= 666666)
+		$magedamadge += 10
+		$mageacuracy += 10
+		$magedef += 10
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now a basic mage."
 		shop2(shopname)
 
-	elsif (purchase == "Attack Mage Training" and @cash >= 666666) or (purchase == "attack mage Training" and @cash >= 666666)
-		@magedamadge += 30
-		@cash -= 666666
+	elsif (purchase == "Attack Mage Training" and $cash >= 666666) or (purchase == "attack mage Training" and $cash >= 666666)
+		$magedamadge += 30
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now a proficient attack mage."
 		shop2(shopname)
 
-	elsif (purchase == "Acurate Mage Training" and @cash >= 666666) or (purchase == "acurate mage Training" and @cash >= 666666)
-		@mageacuracy += 30
-		@cash -= 666666
+	elsif (purchase == "Acurate Mage Training" and $cash >= 666666) or (purchase == "acurate mage Training" and $cash >= 666666)
+		$mageacuracy += 30
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now an acurate mage."
 
 		shop2(shopname)
 
-	elsif (purchase == "Defense Mage Training" and @cash >= 666666) or (purchase == "basic mage Training" and @cash >= 666666)
-		@magedef += 30
-		@cash -= 666666
+	elsif (purchase == "Defense Mage Training" and $cash >= 666666) or (purchase == "basic mage Training" and $cash >= 666666)
+		$magedef += 30
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now a proficiently defensive mage."
 		shop2(shopname)
 
-	elsif (purchase == "Advanced Mage Training" and @cash >= 666666666) or (purchase == "advanced mage Training" and @cash >= 666666666)
-		@magedamadge += 100
-		@cash -= 666666666
-		@mageacuracy += 100
-		@magedef += 100
+	elsif (purchase == "Advanced Mage Training" and $cash >= 666666666) or (purchase == "advanced mage Training" and $cash >= 666666666)
+		$magedamadge += 100
+		$cash -= 666666666
+		$mageacuracy += 100
+		$magedef += 100
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now an advanced mage."
 		shop2(shopname)
@@ -349,7 +349,7 @@ end
 
 def shop1(shopname)
 	puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-	puts "Money: ₨" + @cash.to_s
+	puts "Money: ₨" + $cash.to_s
 
 	puts "Wares:"
 	puts "Arrow: ₨1"
@@ -369,108 +369,108 @@ def shop1(shopname)
 	print "}~" + shopname + "~{:"
 	purchase = gets.chomp
 
-	if (purchase == "Arrow" and @cash >= 1) or (purchase == "arrow" and @cash >= 1)
-		@cash -= 1
-		@arrows += 1
+	if (purchase == "Arrow" and $cash >= 1) or (purchase == "arrow" and $cash >= 1)
+		$cash -= 1
+		$arrows += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 arrow. You now have " + @arrows + " arrows."
+		puts "You bought 1 arrow. You now have " + $arrows + " arrows."
 		shop2(shopname)
 		
-	elsif (purchase == "Arrows" and @cash >= 9) or (purchase == "arrows" and @cash >= 9) or (purchase == "arrows, 10" and @cash >= 9) or (purchase == "Arrows, 10" and @cash >= 9) or (purchase == "10 arrows" and @cash >= 9) or (purchase == "10 Arrows" and @cash >= 9)
-		@cash -= 9
-		@arrows += 10
+	elsif (purchase == "Arrows" and $cash >= 9) or (purchase == "arrows" and $cash >= 9) or (purchase == "arrows, 10" and $cash >= 9) or (purchase == "Arrows, 10" and $cash >= 9) or (purchase == "10 arrows" and $cash >= 9) or (purchase == "10 Arrows" and $cash >= 9)
+		$cash -= 9
+		$arrows += 10
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 10 arrows. You now have " + @arrows + " arrows."
+		puts "You bought 10 arrows. You now have " + $arrows + " arrows."
 		shop2(shopname)
 
-	elsif (purchase == "Rune of Health" and @cash >= 10000) or (purchase == "rune of health" and @cash >= 10000)
-		@cash -= 10000
-		@hp += 10
-		@currenthp = @hp
-		@totalrunes += 1
-		@hr += 1
+	elsif (purchase == "Rune of Health" and $cash >= 10000) or (purchase == "rune of health" and $cash >= 10000)
+		$cash -= 10000
+		$hp += 10
+		$currenthp = $hp
+		$totalrunes += 1
+		$hr += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune of health. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune of health. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Rune of Power" and @cash >= 10000) or (purchase == "rune of power" and @cash >= 10000)
-		@cash -= 10000
-		@baseatc += 10
-		@totalrunes += 1
-		@pr += 1
+	elsif (purchase == "Rune of Power" and $cash >= 10000) or (purchase == "rune of power" and $cash >= 10000)
+		$cash -= 10000
+		$baseatc += 10
+		$totalrunes += 1
+		$pr += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune of power. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune of power. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Rune of Defense" and @cash >= 10000) or (purchase == "rune of defense" and @cash >= 10000)
-		@cash -= 10000
-		@basedef += 10
-		@totalrunes += 1
-		@dr += 1
+	elsif (purchase == "Rune of Defense" and $cash >= 10000) or (purchase == "rune of defense" and $cash >= 10000)
+		$cash -= 10000
+		$basedef += 10
+		$totalrunes += 1
+		$dr += 1
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune of defense. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune of defense. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Rune Bundle" and @cash >= 50000) or (purchase == "rune bundle" and @cash >= 50000)
-		@cash -= 50000
-		@basedef += 20
-		@totalrunes += 6
-		@dr += 2
-		@baseatc += 20
-		@pr += 2
-		@hr += 2
-		@hp += 10
-		@currenthp = @hp
+	elsif (purchase == "Rune Bundle" and $cash >= 50000) or (purchase == "rune bundle" and $cash >= 50000)
+		$cash -= 50000
+		$basedef += 20
+		$totalrunes += 6
+		$dr += 2
+		$baseatc += 20
+		$pr += 2
+		$hr += 2
+		$hp += 10
+		$currenthp = $hp
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
-		puts "You bought 1 rune bundle. You now have " + @totalrunes + " runes."
+		puts "You bought 1 rune bundle. You now have " + $totalrunes + " runes."
 		shop2(shopname)
 
-	elsif (purchase == "Basic Mage Training" and @cash >= 666666) or (purchase == "basic mage Training" and @cash >= 666666)
-		@magedamadge += 10
-		@mageacuracy += 10
-		@magedef += 10
-		@cash -= 666666
+	elsif (purchase == "Basic Mage Training" and $cash >= 666666) or (purchase == "basic mage Training" and $cash >= 666666)
+		$magedamadge += 10
+		$mageacuracy += 10
+		$magedef += 10
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now a basic mage."
 		shop2(shopname)
 
-	elsif (purchase == "Attack Mage Training" and @cash >= 666666) or (purchase == "attack mage Training" and @cash >= 666666)
-		@magedamadge += 30
-		@cash -= 666666
+	elsif (purchase == "Attack Mage Training" and $cash >= 666666) or (purchase == "attack mage Training" and $cash >= 666666)
+		$magedamadge += 30
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now a proficient attack mage."
 		shop2(shopname)
 
-	elsif (purchase == "Acurate Mage Training" and @cash >= 666666) or (purchase == "acurate mage Training" and @cash >= 666666)
-		@mageacuracy += 30
-		@cash -= 666666
+	elsif (purchase == "Acurate Mage Training" and $cash >= 666666) or (purchase == "acurate mage Training" and $cash >= 666666)
+		$mageacuracy += 30
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now an acurate mage."
 
 		shop2(shopname)
 
-	elsif (purchase == "Defense Mage Training" and @cash >= 666666) or (purchase == "basic mage Training" and @cash >= 666666)
-		@magedef += 30
-		@cash -= 666666
+	elsif (purchase == "Defense Mage Training" and $cash >= 666666) or (purchase == "basic mage Training" and $cash >= 666666)
+		$magedef += 30
+		$cash -= 666666
 		clear
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now a proficiently defensive mage."
 		shop2(shopname)
 
-	elsif (purchase == "Advanced Mage Training" and @cash >= 666666666) or (purchase == "advanced mage Training" and @cash >= 666666666)
-		@magedamadge += 100
-		@cash -= 666666666
-		@mageacuracy += 100
-		@magedef += 100
+	elsif (purchase == "Advanced Mage Training" and $cash >= 666666666) or (purchase == "advanced mage Training" and $cash >= 666666666)
+		$magedamadge += 100
+		$cash -= 666666666
+		$mageacuracy += 100
+		$magedef += 100
 		puts "~~~~~~~~" + shopname.to_s + "~~~~~~~~"
 		puts "You are now an advanced mage."
 		shop2(shopname)
@@ -487,7 +487,7 @@ end
 
 def tavern1(tavernname)
 	puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
-	puts "Money: ₨" + @cash.to_s
+	puts "Money: ₨" + $cash.to_s
 	puts "Beverages: "
 	puts "Mead: ₨10"
 	puts "Elvish Wine: ₨200"
@@ -497,24 +497,24 @@ def tavern1(tavernname)
 	print "}~" + tavernname + "~{:"
 	purchase = gets.chomp
 
-	if (purchase == "Mead" && @cash >= 10) or (purchase == "mead" && @cash >= 10)
+	if (purchase == "Mead" && $cash >= 10) or (purchase == "mead" && $cash >= 10)
 		clear
-		@cash -= 10
-		@currenthp += 9
+		$cash -= 10
+		$currenthp += 9
 		puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
 		puts "You down the mead."
 		tavern2(tavernname)
-	elsif (purchase == "elvish wine" && @cash >= 200) or (purchase == "Elvish Wine" && @cash >= 200)
+	elsif (purchase == "elvish wine" && $cash >= 200) or (purchase == "Elvish Wine" && $cash >= 200)
 		clear
-		@cash -= 200
-		@currenthp += 100
+		$cash -= 200
+		$currenthp += 100
 		puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
 		puts "You down the wine."
 		tavern2(tavernname)
-	elsif (purchase == "Water" && @cash >= 1) or (purchase == "water" && @cash >= 1)
+	elsif (purchase == "Water" && $cash >= 1) or (purchase == "water" && $cash >= 1)
 		clear
-		@cash -= 1
-		@currenthp += 1
+		$cash -= 1
+		$currenthp += 1
 		puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
 		puts "You down the water."
 		tavern2(tavernname)
@@ -532,7 +532,7 @@ def tavern1(tavernname)
 end
 
 def tavern2(tavernname)
-	puts "Money: ₨" + @cash.to_s
+	puts "Money: ₨" + $cash.to_s
 	puts "Beverages: "
 	puts "Mead: ₨10"
 	puts "Elvish Wine: ₨200"
@@ -542,24 +542,24 @@ def tavern2(tavernname)
 	print "}~" + tavernname + "~{:"
 	purchase = gets.chomp
 
-	if (purchase == "Mead" && @cash >= 10) or (purchase == "mead" && @cash >= 10)
+	if (purchase == "Mead" && $cash >= 10) or (purchase == "mead" && $cash >= 10)
 		clear
-		@cash -= 10
-		@currenthp += 9
+		$cash -= 10
+		$currenthp += 9
 		puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
 		puts "You down the mead."
 		tavern2(tavernname)
-	elsif (purchase == "elvish wine" && @cash >= 200) or (purchase == "Elvish Wine" && @cash >= 200)
+	elsif (purchase == "elvish wine" && $cash >= 200) or (purchase == "Elvish Wine" && $cash >= 200)
 		clear
-		@cash -= 200
-		@currenthp += 100
+		$cash -= 200
+		$currenthp += 100
 		puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
 		puts "You down the wine."
 		tavern2(tavernname)
-	elsif (purchase == "Water" && @cash >= 1) or (purchase == "water" && @cash >= 1)
+	elsif (purchase == "Water" && $cash >= 1) or (purchase == "water" && $cash >= 1)
 		clear
-		@cash -= 1
-		@currenthp += 1
+		$cash -= 1
+		$currenthp += 1
 		puts "~~~~~~~~" + tavernname.to_s + "~~~~~~~~"
 		puts "You down the water."
 		tavern2(tavernname)
@@ -576,53 +576,39 @@ def tavern2(tavernname)
 	end
 end
 
-def inn1(innname)
-	puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-	puts "Money: ₨" + @cash.to_s
-	puts "Luxurey Room: 10₨"
-	puts "Room: 5₨"
-	puts "You may also leave"
-	print "}~" + innname + "~{:"
-	choice = gets.chomp
-	if (choice == "Luxurey Room" && @cash >= 10) or (choice == "luxurey room" && @cash >= 10)
-		@currenthp += 20
-		@cash -= 10
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	elsif (choice == "Room" && @cash >= 5) or (choice == "room" && @cash >= 5)
-		@currenthp += 10	
-		@cash -= 5
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	end
-end
+def inn(name)
+  puts "\e[H\e[2J"
+  room_cost = 5
+  luxury_room_cost = 10
+  leave = false
+  until leave == true
+    puts <<~Welcome
 
-def inn2(innname)
-	puts "Money: ₨" + @cash.to_s
-	puts "Luxurey Room: 10₨"
-	puts "Room: 5₨"
-	puts "You may also leave"
-	print "}~" + innname + "~{:"
-	choice = gets.chomp
-	if (choice == "Luxurey Room" && @cash >= 10) or (choice == "luxurey room" && @cash >= 10)
-		@currenthp += 20
-		@cash -= 10
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	elsif (choice == "Room" && @cash >= 5) or (choice == "room" && @cash >= 5)
-		@currenthp += 10	
-		@cash -= 5
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	end
+      ~~~~~~~ #{name} ~~~~~~~
+      1. Luxury Room: #{luxury_room_cost}₨
+      2. Room: #{room_cost}₨
+      3. You may also leave
+
+      }~ #{name} ~{:
+    Welcome
+    choice = gets.chomp
+    puts "\e[H\e[2J"
+    case choice.downcase
+    when "1", "luxury", "luxury room"
+      $currenthp += 20
+      $cash -= 10
+      puts "You slept well"
+    when "2", "room"
+      $currenthp += 10  
+      $cash -= 5
+      puts "You slept well"
+    when "3", "leave"
+      puts "See ya"
+      leave = true
+    else
+      puts "Please try again"
+    end
+  end
 end
 clear
 
@@ -631,7 +617,7 @@ clear
 puts '               
        / \    )\__/(     / \       
       /   \  (_\  /_)   /   \      
- ____/_____\__\@  @/___/_____\____ 
+ ____/_____\__\$  $/___/_____\____ 
 |             |\../|              |
 |              \VV/               |
 |         Before The Rings        |
@@ -660,13 +646,13 @@ end
 puts "Welcome to the land of Middle Earth. What is your name young one?"
 print "[{1}]:"
 #gets player input
-@player_name = gets
+$player_name = gets
 #removes new line after name
 
-@player_name = @player_name.chomp
+$player_name = $player_name.chomp
 clear
 def segment1
-	puts "Now, "+ @player_name + ", what is your race?"
+	puts "Now, "+ $player_name + ", what is your race?"
 	puts <<~PlayerSelect
 	
 	1. Human:
@@ -692,34 +678,34 @@ def segment1
 	
 	PlayerSelect
 	print "[{1}]:"
-	@race = gets.chomp
+	$race = gets.chomp
 
 	#Race select
-	case @race.downcase
+	case $race.downcase
 	when "1", "human"
-		@race = "Human"
-		@defense = 5
-		@speed = 8
-		@stamina = 12
+		$race = "Human"
+		$defense = 5
+		$speed = 8
+		$stamina = 12
 	when "2", "elf"
-		@race = "Elf"
-		@defense = 3
-		@speed = 12
-		@stamina = 10
-		@randgedatcspeed = 2
+		$race = "Elf"
+		$defense = 3
+		$speed = 12
+		$stamina = 10
+		$randgedatcspeed = 2
 	when "3", "dwarf"
-		@race = "Dwarf"
-		@defense = 12
-		@speed = 3
-		@stamina = 10
-		@baseatc = 2
+		$race = "Dwarf"
+		$defense = 12
+		$speed = 3
+		$stamina = 10
+		$baseatc = 2
 	when "4", "hobbit"
-		@race = "Hobbit"
-		@defense = 11
-		@speed = 10
-		@stamina = 3
-		@hp += 2
-		@currenthp = @hp
+		$race = "Hobbit"
+		$defense = 11
+		$speed = 10
+		$stamina = 3
+		$hp += 2
+		$currenthp = $hp
 	else
 		clear
 		segment1
@@ -731,7 +717,7 @@ segment1
 clear
 def segment2
 
-	puts "Now, " + @player_name + " The " + @race + ", what melee weapon do you prefer. If it is not there, do not worry, you will find weapons later in your adventures. In addition to this weapon, you will gain a Commoner's bow (ranged attack: 5), and 20 normal arrows"
+	puts "Now, " + $player_name + " The " + $race + ", what melee weapon do you prefer. If it is not there, do not worry, you will find weapons later in your adventures. In addition to this weapon, you will gain a Commoner's bow (ranged attack: 5), and 20 normal arrows"
 
 	puts <<~WeaponSelect
 	1. Commoner's longsword:
@@ -751,30 +737,30 @@ def segment2
 	attack speed: 2.5
 	WeaponSelect
 	print "[{1}]:"
-	@weapon = gets.chomp
+	$weapon = gets.chomp
 
 	# Weapon Select
-	case @weapon.downcase
+	case $weapon.downcase
 	when "1", "commoner's longsword", "longsword"
-		@weapon = "Commoner's longsword"
-		@attack = 2
-		@atcsppeed = 5
+		$weapon = "Commoner's longsword"
+		$attack = 2
+		$atcsppeed = 5
 	when "2", "commoner's daggers", "dagger"
-		@weapon = "Commoner's daggers"
-		@attack = 5.1
-		@atcsppeed = 2
+		$weapon = "Commoner's daggers"
+		$attack = 5.1
+		$atcsppeed = 2
 	when "3", "commoner's claymore", "claymore"
-		@weapon = "Commoner's claymore"
-		@attack = 10
-		@atcsppeed = 1
+		$weapon = "Commoner's claymore"
+		$attack = 10
+		$atcsppeed = 1
 	when "4", "commoner's lance", "lance"
-		@weapon = "Commoner's lance"
-		@attack = 3
-		@atcsppeed = 3
+		$weapon = "Commoner's lance"
+		$attack = 3
+		$atcsppeed = 3
 	when "5", "commoner's shortsword", "shortsword"
-		@weapon = "Commoner's shortsword"
-		@attack = 4
-		@atcsppeed = 2.5
+		$weapon = "Commoner's shortsword"
+		$attack = 4
+		$atcsppeed = 2.5
 	else
 		clear
 		segment2
@@ -784,13 +770,13 @@ end
 segment2
 clear
 
-puts "So you wish to use the " + @weapon + "? Interesting choice. Now to begin...."
+puts "So you wish to use the " + $weapon + "? Interesting choice. Now to begin...."
 timer(2)
 clear
 
 
 #open this for seizure	
-if true && @player_name.downcase != "skip"
+if true && $player_name.downcase != "skip"
 	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
 	sentence2 = "One day a powerful wizard took pity on the town."
 	sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
@@ -848,11 +834,11 @@ case battle2.downcase
 when "ride"
 	puts "You ride vigorously until you see the blooming tree of Gondor. The Oruk-Hai whistles. 29 more appear."
 when "attack"
-	@arrows -= 1
+	$arrows -= 1
 	puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
-	puts "current ac: " + @armour
+	puts "current ac: " + $armour
 	puts "armour's ac: 9"
-	puts "current armour name: " + @armourname
+	puts "current armour name: " + $armourname
 	puts "options:"
 	puts "Take"
 	puts "Keep"
@@ -861,8 +847,8 @@ when "attack"
 	clear
 	if choice1 == "Take" or choice1 == "take"
 		puts "You dawn the armor"
-		@ac = 9
-		@armourname = "Eye of Sauron Oruk-Hai armor"
+		$ac = 9
+		$armourname = "Eye of Sauron Oruk-Hai armor"
 		
 	else
 		puts "Too bad🙁."
@@ -879,9 +865,9 @@ when "attack"
 
 	if choice1 == "Take" or choice1 == "take"
 		puts "You take the scimitar"
-		@attack = 6
-		@attackspeed = 4.75
-		@weapon = "Oruk-Hai scimitar"
+		$attack = 6
+		$attackspeed = 4.75
+		$weapon = "Oruk-Hai scimitar"
 		
 	else
 		puts "Too bad🙁."
