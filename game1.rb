@@ -1,25 +1,25 @@
 
 class Volume2
-	def initiate
-			hud
-			puts "You climb the ladder. It turns out the walls are connected. You see ladders attempting to latch on. Do you push them off, or go back down the ladder?"
-			puts "Push"
-			puts "Climb"
+	def initialize
+		hud
+		puts "You climb the ladder. It turns out the walls are connected. You see ladders attempting to latch on. Do you push them off, or go back down the ladder?"
+		puts "Push"
+		puts "Climb"
 			
-			print "[{2}]:"
-			c1 = gets.chomp
+		print "[{2}]:"
+		c1 = gets.chomp
 
-			if c1 == "climb" or c1 == "Climb"
-				clear 
-				townsquare
-			elsif c1 == "push" or c1 == "Push"
-				clear
-				ladder1
-			else
-				clear
-				puts "You die, the moment an arrow hits you in the heart."
-				v2d
-			end
+		if c1 == "climb" or c1 == "Climb"
+			clear 
+			townsquare
+		elsif c1 == "push" or c1 == "Push"
+			clear
+			ladder1
+		else
+			clear
+			puts "You die, the moment an arrow hits you in the heart."
+			v2d
+		end
 	end
 
 	def v1d
@@ -622,22 +622,115 @@ def inn2(innname)
 		inn2(innname)
 	end
 end
+
+def dungeonhealer1(healername)
+	clear
+	hud
+	puts '__________|  Exit  |___________
+	|         __________           |
+	|       []   ___    []         |
+	|       []  /   \   []         |
+	|       [] /_____\  []         |
+	|       []__________[]         |
+	|________           ___________|
+	#########| Arival  |############'
+	puts 'You walk into a chamber that has a pool on a pedistul in the middle and an exit on the other side of it. Do you walk up to the pool or go through the exit?'
+	puts 'Pool'
+	puts 'Exit'
+	print '[{💙}]: '
+    healer1 = gets.chomp
+
+    if healer1 == 'Pool' or healer1 == 'pool'
+    	clear
+    	puts '
+				    / /   ___      ___\__\
+		           /_/___/___ }__/__  \____\
+		          /__/__//____|///  //|  \  \
+		         .__/ _//____|///__//_|___\__\_/\
+		       /__//_/__/||||/ / !|___|_____\_| j
+		      / _// _/|// |/_-.   -7//|__|_____| (
+		     `  /|_|_|   /7nT      |=_  V|__||__|\|
+		         /|__|  ! `)|      /~j\  |___|_|
+		          |||    `"`      `-_,/  /____/|j
+		          || l|        `    `"   //j/ __|
+		          |__` ]                `/j?|____|
+		         |__|_|\      __       ///\_|_____|
+		         |_|__|__\   `  )     / j/ __|_|___|
+		        ,_i__|_|| \          / j/___||_|____|
+     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
+    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___|
+    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___|
+    		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
+    		|_|   !/ |/-__7/  "__/||           `__||___|
+		---------------------------------------------------'
+		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
+		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
+		dungeonhealer2(healername)
+    elsif healer1 == 'exit' or healer1 == 'Exit'
+    	clear
+    else
+    	dungeonhealer1(healername)
+	end	
+end
+
+def dungeonhealer2(healername)
+	puts 'Do you walk up to the pool or go through the exit?'
+	puts 'Pool'
+	puts 'Exit'
+	print '[{💙}]: '
+    healer1 = gets.chomp
+
+    if healer1 == 'Pool' or healer1 == 'pool'
+    	clear
+    	puts '
+				    / /   ___      ___\__\
+		           /_/___/___ }__/__  \____\
+		          /__/__//____|///  //|  \  \
+		         .__/ _//____|///__//_|___\__\_/\
+		       /__//_/__/||||/ / !|___|_____\_| j
+		      / _// _/|// |/_-.   -7//|__|_____| (
+		     `  /|_|_|   /7nT      |=_  V|__||__|\|
+		         /|__|  ! `)|      /~j\  |___|_|
+		          |||    `"`      `-_,/  /____/|j
+		          || l|        `    `"   //j/ __|
+		          |__` ]                `/j?|____|
+		         |__|_|\      __       ///\_|_____|
+		         |_|__|__\   `  )     / j/ __|_|___|
+		        ,_i__|_|| \          / j/___||_|____|
+     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
+    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___|
+    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___|
+    		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
+    		|_|   !/ |/-__7/  "__/||           `__||___|
+		---------------------------------------------------'
+		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
+		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
+		dungeonhealer2(healername)
+    elsif healer1 == 'exit' or healer1 == 'Exit'
+    	clear
+    else
+    	dungeonhealer1(healername)
+	end	
+end
+
 clear
 
 
 
-puts '               
+puts ' 
+       + +    *    *     + +     
        / \    )\__/(     / \       
-      /   \  (_\  /_)   /   \      
- ____/_____\__\@  @/___/_____\____ 
+      /   \  (__()__)   /   \      
+ ____/_____\__\0  0/___/_____\____ 
 |             |\../|              |
-|              \VV/               |
-|         Before The Rings        |
+|              \__/               |
+|      <<<Before The Rings>>>     |
 |_________________________________|
  |    /\ /      ((       \ /\    | 
  |  /   V        ))       V   \  | 
- |/     `       //              \| 
- `              V                '
+ |/     +       ((        +     \| 
+ +               V               + 
+                 *                   '
 puts "Please type names and commands exactly as said."
 puts "For the best expirience, play in full screen."
 puts "Click control =. Do so again 9 times"
@@ -850,9 +943,9 @@ if battle2 =="Ride" or battle2 == "ride"
 elsif battle2 == "Attack" or battle2 == "attack"
 	$arrows -= 1
 	puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
-	puts "current ac: " + $aurmor
+	puts "current ac: " + $ac.to_s
 	puts "armour's ac: 9"
-	puts "current armour name: " + $armourname
+	puts "current armor name: " + $armorname
 	puts "options:"
 	puts "Take"
 	puts "Keep"
@@ -903,11 +996,12 @@ puts "Difficulty: Absulute Beginner"
 puts ""
 hint1 = rand(10)
 hints(hint1)
-puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.You climb the ladder'
+puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.'
 v2 = Volume2.new
 puts ""
 puts "Volume 3:"
 puts "The Castle of the Warlord"
 puts "Difficulty: Absulute Beginner"
-puts ""
+puts "Warning: this level is a dungeon, that means it is the final level before a boss"
 hint1 = rand(10)
+puts "You wake up, in a small room"
