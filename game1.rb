@@ -738,9 +738,7 @@ puts "Please type names and commands exactly as said."
 puts "For the best expirience, play in full screen."
 puts "Click control =. Do so again 9 times"
 puts "Do you wish to play?"
-=======
- |/     `       //              \| 
- `              V                `'
+
 puts <<~intro
 Please type names and commands exactly as said.
 For the best expirience, play in full screen.
