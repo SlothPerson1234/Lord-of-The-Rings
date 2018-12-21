@@ -652,9 +652,9 @@ def dungeonhealer1(healername)
 		       /__//_/__/||||/ / !|___|_____\_| j
 		      / _// _/|// |/_-.   -7//|__|_____| (
 		     `  /|_|_|   /7nT      |=_  V|__||__|\|
-		         /|__|  ! `)|      /~j\  |___|_|
-		          |||    `"`      `-_,/  /____/|j
-		          || l|        `    `"   //j/ __|
+		         /|__|  ! ^)|       /~j\ |___|_|
+		          |||    `"`       ` _,/ /____/|j
+		          || l|        `     `"  //j/ __|
 		          |__` ]                `/j?|____|
 		         |__|_|\      __       ///\_|_____|
 		         |_|__|__\   `  )     / j/ __|_|___|
@@ -663,7 +663,9 @@ def dungeonhealer1(healername)
     		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___|
     		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___|
     		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
-    		|_|   !/ |/-__7/  "__/||           `__||___|
+    		|_|   !/ |/-__7/  /__/||           `__||___|
+    		|_|    ! |_____/   | /||             |_______|
+    		|_|    ! ||_!_/  " /__||             |_______|      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -692,9 +694,9 @@ def dungeonhealer2(healername)
 		       /__//_/__/||||/ / !|___|_____\_| j
 		      / _// _/|// |/_-.   -7//|__|_____| (
 		     `  /|_|_|   /7nT      |=_  V|__||__|\|
-		         /|__|  ! `)|      /~j\  |___|_|
-		          |||    `"`      `-_,/  /____/|j
-		          || l|        `    `"   //j/ __|
+		         /|__|  ! ^)|       /~j\ |___|_|
+		          |||    `"`       ` _,/ /____/|j
+		          || l|        `     `"  //j/ __|
 		          |__` ]                `/j?|____|
 		         |__|_|\      __       ///\_|_____|
 		         |_|__|__\   `  )     / j/ __|_|___|
@@ -703,12 +705,14 @@ def dungeonhealer2(healername)
     		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___|
     		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___|
     		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
-    		|_|   !/ |/-__7/  "__/||           `__||___|
+    		|_|   !/ |/-__7/  /__/||           `__||___|
+    		|_|    ! |_____/   | /||             |_______|
+    		|_|    ! ||_!_/  " /__||             |_______|      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
 		dungeonhealer2(healername)
-    elsif healer1 == 'exit' or healer1 == 'Exit'
+    elsif healer1 == 'exit' or healer1 == 'Exit' 
     	clear
     else
     	dungeonhealer1(healername)
