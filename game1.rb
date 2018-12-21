@@ -576,53 +576,48 @@ def tavern2(tavernname)
 	end
 end
 
-def inn1(innname)
-	puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-	puts "Money: ₨" + $cash.to_s
-	puts "Luxurey Room: 10₨"
-	puts "Room: 5₨"
-	puts "You may also leave"
-	print "}~" + innname + "~{:"
-	choice = gets.chomp
-	if (choice == "Luxurey Room" && $cash >= 10) or (choice == "luxurey room" && $cash >= 10)
-		$currenthp += 20
-		$cash -= 10
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	elsif (choice == "Room" && $cash >= 5) or (choice == "room" && $cash >= 5)
-		$currenthp += 10	
-		$cash -= 5
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	end
-end
+def inn(name)
+  puts "\e[H\e[2J"
+  heal_by = 10
+  room_cost = 5
+  luxury_room_cost = 10
+  leave = false
+  until leave == true
+    puts <<~Welcome
 
-def inn2(innname)
-	puts "Money: ₨" + $cash.to_s
-	puts "Luxurey Room: 10₨"
-	puts "Room: 5₨"
-	puts "You may also leave"
-	print "}~" + innname + "~{:"
-	choice = gets.chomp
-	if (choice == "Luxurey Room" && $cash >= 10) or (choice == "luxurey room" && $cash >= 10)
-		$currenthp += 20
-		$cash -= 10
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	elsif (choice == "Room" && $cash >= 5) or (choice == "room" && $cash >= 5)
-		$currenthp += 10	
-		$cash -= 5
-		clear
-		puts "~~~~~~~~" + innname.to_s + "~~~~~~~~"
-		puts "You slept well"
-		inn2(innname)
-	end
+      ~~~~~~~ #{name} ~~~~~~~
+      1. Luxury Room: #{luxury_room_cost}₨
+      2. Room: #{room_cost}₨
+      3. You may also leave
+
+      }~ #{name} ~{:
+    Welcome
+    choice = gets.chomp
+    puts "\e[H\e[2J"
+    case choice.downcase
+    when "1", "luxury", "luxury room"
+      unless $cash < luxury_room_cost 
+        $currenthp += heal_by
+        $cash -= luxury_room_cost
+        puts "You slept well"
+      else
+        puts "Not enough money!"
+      end
+    when "2", "room"
+      unless $cash < room_cost 
+        $currenthp += heal_by  
+        $cash -= room_cost
+        puts "You slept well"
+      else
+        puts "Not enough money!"
+      end
+    when "3", "leave"
+      puts "See ya"
+      leave = true
+    else
+      puts "Please try again"
+    end
+  end
 end
 
 def dungeonhealer1(healername)
