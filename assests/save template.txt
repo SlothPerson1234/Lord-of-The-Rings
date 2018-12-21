@@ -2,7 +2,7 @@ Replace text with apropriate inside  **. This is best done during the game.
 Name: ** 
 Race: **
 Starting weapon: **
-Volume 1
+<<<<<<<<Volume 1>>>>>>>>>
 Choice 1: **
 Choice 2: **
 Choice ?: **

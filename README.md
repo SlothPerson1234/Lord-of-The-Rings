@@ -1,4 +1,4 @@
-#Lord of the Rings: Before the Rings
+# Lord of the Rings: Before the Rings
 This is a text adventure game exploring the land of Middle-Earth. 
 
 ## Gameplay
