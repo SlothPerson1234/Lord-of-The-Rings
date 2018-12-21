@@ -23,7 +23,8 @@ This project is written in basic ruby.
 | ------------- | ------------- |
 | 1, Boromir | Volume 2 complete, asests added, along with this table. |
 | 2, Golum | To comence upon completeing volume 3 |
-The next statistics are only updated upon completion of a major update.
+
+>The next statistics are only updated upon completion of a major update.
 ### Lines of Code
 >903, after Boromir complete
 
