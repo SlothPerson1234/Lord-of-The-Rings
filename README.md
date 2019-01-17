@@ -1,5 +1,5 @@
 # Lord of the Rings: Before the Rings
->![Ring logo](https://docs.google.com/drawings/d/e/2PACX-1vSi7zHjayxiLQDwheMKs5Py-iSwYKJ-U5P6cMGBMQunMRXKZshRZs3U08zQWyxZDNigvJnKcVO9Rib-/pub?w=162&amp;h=79)
+>![Ring logo](https://docs.google.com/drawings/d/e/2PACX-1vSi7zHjayxiLQDwheMKs5Py-iSwYKJ-U5P6cMGBMQunMRXKZshRZs3U08zQWyxZDNigvJnKcVO9Rib-/pub?w=323&amp;h=159)
 
 This is a text adventure game exploring the land of Middle-Earth. 
 
