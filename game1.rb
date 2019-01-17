@@ -686,22 +686,22 @@ def dungeonhealer2(healername)
 		           /_/___/___ }__/__  \____\
 		          /__/__//____|///  //|  \  \
 		         .__/ _//____|///__//_|___\__\_/\
-		       /__//_/__/||||/ / !|___|_____\_| j
+		       /__//_/__/||||/ / !|___|_____\_| J
 		      / _// _/|// |/_-.   -7//|__|_____| (
 		     `  /|_|_|   /7nT      |=_  V|__||__|\|
-		         /|__|  ! ^)|       /~j\ |___|_|
-		          |||    `"`       ` _,/ /____/|j
+		         /|__|  ! ^)|       /~J\ |___|_|
+		          |||    `"`       ` _,/ /____/|J
 		          || l|        `     `"  //j/ __|
-		          |__` ]                `/j?|____|
-		         |__|_|\      __       ///\_|_____|
-		         |_|__|__\   `  )     / j/ __|_|___|
-		        ,_i__|_|| \          / j/___||_|____|
+		          |__` ]                `/j?|____\
+		         |__|_|\      __       ///\_|_____\
+		         |_|__|__\   `  )     / j/ __|_|___\
+		        ,_i__|_|| \          / j/___||_|____\
      		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
-    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___|
-    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___|
-    		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
+    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___\
+    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___\
+    		|_|  || !| ||__|/  /_/:"/         ,__!:|___\
     		|_|   !/ |/-__7/  /__/||           `__||___|
-    		|_|    ! |_____/   | /||             |_______|
+    		|_|    ! |_____/   | /||             |______\
     		|_|    ! ||_!_/  " /__||             |_______|      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
@@ -712,7 +712,7 @@ def dungeonhealer2(healername)
     else
     	dungeonhealer1(healername)
 	end	
-end
+end   
 
 clear
 
