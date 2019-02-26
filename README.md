@@ -24,7 +24,7 @@ This project is written in basic ruby.
 | Update | Info |
 | ------------- | ------------- |
 | 1, Boromir | Volume 2 complete, asests added, along with this table. |
-| 2, Golum | To comence upon completeing volume 3 |
+| 2, Gollum | To comence upon completeing volume 3 |
 
 >The next statistics are only updated upon completion of a major update.
 ### Lines of Code
