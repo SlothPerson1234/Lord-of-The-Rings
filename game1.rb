@@ -129,6 +129,35 @@ class Volume2
 	end
 end
 
+class Volume3
+	def initialize
+		puts "You wake up, in a small room, with a halway stretching out from it. 3 goblins attack. Do you attempt to run past them, or do you attack them?"
+		gets
+		battle1
+
+		
+
+
+	end
+
+	def battle1
+		hud
+		puts "################################
+ ___________ ####### ___________
+|           |_______|   ______  |
+|  Arival    _______   (      ) |
+|___________|#######|           |
+_________________###|           |
+<-----  Exit     |##|   [] []   |
+|_____________   |##|           |
+##############|  |__|   [] []   /
+##############|________________/#"
+	end
+
+	
+
+end
+
 #stats
 $ac = 0
 $atcsppeed = 0
@@ -713,6 +742,11 @@ def dungeonhealer2(healername)
     	dungeonhealer1(healername)
 	end	
 end   
+
+def battlehud(enemiename)
+	puts $player_name +	" HP: " + currenthp + '/' + hp + "-----VS.-----" + enemiename 
+end
+
 clear
 timer(3)
 puts "  
@@ -1187,4 +1221,4 @@ puts "The Castle of the Warlord"
 puts "Difficulty: Absulute Beginner"
 puts "Warning: this level is a dungeon, that means it is the final level before a boss"
 hint1 = rand(10)
-puts "You wake up, in a small room"
+v3 = Volume3.new
