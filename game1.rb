@@ -17,7 +17,7 @@ class Volume2
 		else
 			clear
 			puts "You die, the moment an arrow hits you in the heart."
-			v2d
+			v1d
 		end
 	end
 
@@ -45,8 +45,10 @@ class Volume2
 			end
 		else
 			
-		puts "It misses!"
+			puts "It misses!"
 		end
+		timer(5)
+		clear
 		puts "You quickly shove the servent of evil off then run over to a wonded guard."
 		puts "The guard nearbye thanks you, gifting you with 100₨"
 		$cash += 100
@@ -54,6 +56,7 @@ class Volume2
 	end
 
 	def townsquare
+			clear
 			hud
 			puts "You enter the town square"
 			puts "A tavern is to your right, a shop also sits to your left, an in rignt beside it. The White Tree of Gondor lies ahead. You may also go back up the ladder, or down to the front gates."
@@ -108,9 +111,11 @@ class Volume2
 		puts "Keep"
 		print "[{2}]:"
 		choice2 = gets.chomp
+		clear
 
 		if choice1 == "Take" or choice1 == "take"
 			hud
+
 			puts "You take the weapon"
 			$rangedatc = 5
 			$randgedatcspeed = 3
@@ -132,8 +137,11 @@ end
 class Volume3
 	def initialize
 		puts "You wake up, in a small room, with a halway stretching out from it. 3 goblins attack. Do you attempt to run past them, or do you attack them?"
+		print "<]<]^3^[>[>:"
 		gets
+		clear
 		battle1
+
 
 		
 
@@ -154,6 +162,7 @@ _________________###|           |
 ##############|________________/#"
 		
 		puts "You get roped into the battle. Do you attack or defend?"
+		print "<]<]^3^[>[>:"
 		fight = gets.chomp.to_s
 		
 
