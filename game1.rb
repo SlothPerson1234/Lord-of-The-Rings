@@ -145,16 +145,21 @@ class Volume3
 		puts "################################
  ___________ ####### ___________
 |           |_______|   ______  |
-|  Arival    _______   (      ) |
+|  Arival  * _______   (      ) |
 |___________|#######|           |
 _________________###|           |
 <-----  Exit     |##|   [] []   |
 |_____________   |##|           |
 ##############|  |__|   [] []   /
 ##############|________________/#"
+		
+		puts "You get roped into the battle. Do you attack or defend?"
+		fight = gets.chomp.to_s
+		
+
 	end
 
-	
+
 
 end
 
@@ -951,7 +956,7 @@ For the best expirience, play in full screen.
 Click control =. Do so again 9 times
 Do you wish to play?
 intro
->>>>>>> 936f5b862484aeda6dbf92b61f5b59d656ff113a
+
 print "🌾: "
 play = gets.chomp.to_s
 if play == "yes" or play == "Yes"
@@ -1113,7 +1118,7 @@ if true && $player_name.downcase != "skip"
 		#...split each char into an array indecie, and then run loop on every indecie.
 		sentence.split(%r{}).each do |char| 
 			print char
-			timer(0.25)
+			timer(0.20)
 		end
 		#After last char, pause and clear screen, the move to next sentence
 		timer(2)
@@ -1136,7 +1141,7 @@ case battle1.downcase
 	when "defend"
 	puts "Your defense causes you to find an opening. You slice the orc's heads off with one blow."
 when "attack"
-	puts "You unleash a flurry of attacks which leave the orcs laying unconsioce on the ground. You quickly finish the job."
+	puts "You unleash a flurry of attacks which leave the orcs laying unconscious on the ground. You quickly finish the job."
 else
 	puts "☠️You stand their mumbiling to your self. The orcs murder you. They carve an eye on your forehead and begin to loot your body. Come back when 
 	you know how to play this game.☠️"
@@ -1156,11 +1161,11 @@ when "ride"
 when "attack"
 	$arrows -= 1
 	puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
-<<<<<<< HEAD
+
 	puts "current ac: " + $ac.to_s
-=======
-	puts "current ac: " + $armour
->>>>>>> 936f5b862484aeda6dbf92b61f5b59d656ff113a
+
+	puts "current ac: " + $armour.to_s
+
 	puts "armour's ac: 9"
 	puts "current armor name: " + $armorname
 	puts "options:"
