@@ -12,12 +12,12 @@ This is a text adventure game exploring the land of Middle-Earth.
 This is planed to be at first, a relatively easy game, and then its difficulty progresses according to the gameplay.
 
 ## Location
-If it took place in the third age, the adventure would begin along the river labeled Ciril, the Goblin Warlord's lair being found in the Ephel Duath, being found about halfway inbetween the Crossings of Poros and the Sea of Nurnen.
+If it took place in the third age, the adventure would begin along the river labeled Ciril, the Goblin Warlord's lair being found in the Ephel Duath, about halfway inbetween the Crossings of Poros and the Sea of Nurnen.
 
 >![Map of Middle Earth](https://i.imgur.com/VNYqEcp.jpg)
 
 ## Code
-This project is written in basic ruby.
+This project is written in basic ruby, with some moderatly advanced systems
 
 ## Major Updates
 

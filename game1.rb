@@ -25,6 +25,7 @@ class Volume2
 		timer(2)
 		clear
 		puts "The Shadow of θaʊron soon covers all of Middle-Earth. The dark ages begin."
+
 		abort
 
 	end
@@ -141,11 +142,17 @@ class Volume3
 		gets
 		clear
 		battle1
+	end
 
-
-		
-
-
+	def v2d
+		timer(2)
+		clear
+		puts "Your finaly screams of agany can be heard through out the anciant caverns. Many beings come to feast upon the body that you once were in controll of. A high-pitched screech echos through the caverns. Almost triumphant, the voice appears to echo, saying one word:"
+		puts ".▄▄ · ▄▄▄·▄• ▄▄▄▄       ▐ ▄ 
+▐█ ▀.▐█ ▀██▪██▀▄ █▪    •█▌▐█
+▄▀▀▀█▄█▀▀██▌▐█▐▀▀▄ ▄█▀▄▐█▐▐▌
+▐█▄▪▐▐█ ▪▐▐█▄█▐█•█▐█▌.▐██▐█▌
+ ▀▀▀▀ ▀  ▀ ▀▀▀.▀  ▀▀█▄▀▀▀ █▪"
 	end
 
 	def battle1
@@ -164,8 +171,72 @@ _________________###|           |
 		puts "You get roped into the battle. Do you attack or defend?"
 		print "<]<]^3^[>[>:"
 		fight = gets.chomp.to_s
+
+		if fight == "attack" or fight == "Attack"
+			clear
+			battlehud("Goblins")
+			puts "You lunge, cleaving the heads of the goblins from their shoulders. You reign victorious."
+			timer(5)
+			room1
+		else fight == "defend" or fight == "Defend"
+			clear 
+			battlehud("Goblins")
+			puts "You dodge their blows, than imidiatly attack, removing the arms of the Goblins. They die."
+			timer(5)
+			room1
+		else
+			puts "▓██   ██▓▒█████  █    ██    ▓█████▄ ██▓█████▓█████▄ 
+ ▒██  ██▒██▒  ██▒██  ▓██▒   ▒██▀ ██▓██▓█   ▀▒██▀ ██▌
+  ▒██ ██▒██░  ██▓██  ▒██░   ░██   █▒██▒███  ░██   █▌
+  ░ ▐██▓▒██   ██▓▓█  ░██░   ░▓█▄   ░██▒▓█  ▄░▓█▄   ▌
+  ░ ██▒▓░ ████▓▒▒▒█████▓    ░▒████▓░██░▒████░▒████▓ 
+   ██▒▒▒░ ▒░▒░▒░░▒▓▒ ▒ ▒     ▒▒▓  ▒░▓ ░░ ▒░ ░▒▒▓  ▒ 
+ ▓██ ░▒░  ░ ▒ ▒░░░▒░ ░ ░     ░ ▒  ▒ ▒ ░░ ░  ░░ ▒  ▒ 
+ ▒ ▒ ░░ ░ ░ ░ ▒  ░░░ ░ ░     ░ ░  ░ ▒ ░  ░   ░ ░  ░ 
+ ░ ░        ░ ░    ░           ░    ░    ░  ░  ░    
+ ░ ░                         ░               ░      "
+			puts "You must think quick in battle."
+			v2d
+			abort
+
+		end
+
 		
 
+	end
+
+	def room1
+		clear
+		hud
+		puts "################################
+ ___________ ####### ___________
+|           |_______|   ______  |
+|  Arival  * _______   (      ) |
+|___________|#######|           |
+_________________###|           |
+<-----  Exit     |##|   [] []   |
+|_____________   |##|           |
+##############|  |__|   [] []   /
+##############|________________/#"
+
+		puts "The remains of the goblins still litter the floor. A Small loop hangs on the crudley carved wall of the cavern. Looking up, the cealing streaches for many meters above you, wooden bridges crossing the chamber, with many lanterns hanging above. Abridge in front of you spans the cavern. Do you walk across, or jump off?"
+		puts "Walk"
+		puts "Jump"
+		print "<]<]^3^[>[>:"
+		room1crucial = gets.chomp.to_s
+		if room1crucial == "Jump" or room1crucial == "jump"
+			puts "You jump off. You die. Good job..."
+			timer(10)
+			clear
+			puts "JK, as you fall into the abyss, a dragon scoops you up and drops you back on the bridge. You walk back into the room you came from."
+			timer(5)
+			clear 
+			room1
+		else room1crucial == "Walk" or room1crucial == "walk"
+
+
+		end
+	
 	end
 
 
@@ -687,23 +758,23 @@ def dungeonhealer1(healername)
 		           /_/___/___ }__/__  \____\
 		          /__/__//____|///  //|  \  \
 		         .__/ _//____|///__//_|___\__\_/\
-		       /__//_/__/||||/ / !|___|_____\_| j
+		       /__//_/__/||||/ / !|___|_____\_| L
 		      / _// _/|// |/_-.   -7//|__|_____| (
-		     `  /|_|_|   /7nT      |=_  V|__||__|\|
-		         /|__|  ! ^)|       /~j\ |___|_|
-		          |||    `"`       ` _,/ /____/|j
-		          || l|        `     `"  //j/ __|
-		          |__` ]                `/j?|____|
-		         |__|_|\      __       ///\_|_____|
-		         |_|__|__\   `  )     / j/ __|_|___|
-		        ,_i__|_|| \          / j/___||_|____|
+		     `  /|_|_|   /7nT/     |=_  V|__||__|\|
+		         /|_|   |~^)|       /~j\ |___L_|
+		          || \   `"`       ^ _,/ /____/|j
+		          || l|        `     `"  //j/ __\
+		          |"_`]                ^/j?|____\
+		         |__|_|\       _       ///\_|_____\
+		         |_|__|__\            / J/ __|_|___|
+		        ,_i__|_|| \          / J/___||_|____\
      		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
-    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___|
-    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___|
+    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___\
+    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___\
     		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
-    		|_|   !/ |/-__7/  /__/||           `__||___|
-    		|_|    ! |_____/   | /||             |_______|
-    		|_|    ! ||_!_/  " /__||             |_______|      
+    		|_|   !/ |/-__7/  /__/||           `__||___\_
+    		|_|    ! |____/    | /||             \_______\_
+    		|_|    !^||_!/   " /__||               \_______|      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -729,23 +800,23 @@ def dungeonhealer2(healername)
 		           /_/___/___ }__/__  \____\
 		          /__/__//____|///  //|  \  \
 		         .__/ _//____|///__//_|___\__\_/\
-		       /__//_/__/||||/ / !|___|_____\_| J
+		       /__//_/__/||||/ / !|___|_____\_| L
 		      / _// _/|// |/_-.   -7//|__|_____| (
-		     `  /|_|_|   /7nT      |=_  V|__||__|\|
-		         /|__|  ! ^)|       /~J\ |___|_|
-		          |||    `"`       ` _,/ /____/|J
-		          || l|        `     `"  //j/ __|
-		          |__` ]                `/j?|____\
-		         |__|_|\      __       ///\_|_____\
-		         |_|__|__\   `  )     / j/ __|_|___\
-		        ,_i__|_|| \          / j/___||_|____\
+		     `  /|_|_|   /7nT/     |=_  V|__||__|\|
+		         /|_|   |~^)|       /~j\ |___L_|
+		          || \   `"`       ^ _,/ /____/|j
+		          || l|        `     `"  //j/ __\
+		          |"_`]                ^/j?|____\
+		         |__|_|\       _       ///\_|_____\
+		         |_|__|__\            / J/ __|_|___|
+		        ,_i__|_|| \          / J/___||_|____\
      		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
     		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___\
     		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___\
-    		|_|  || !| ||__|/  /_/:"/         ,__!:|___\
-    		|_|   !/ |/-__7/  /__/||           `__||___|
-    		|_|    ! |_____/   | /||             |______\
-    		|_|    ! ||_!_/  " /__||             |_______|      
+    		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
+    		|_|   !/ |/-__7/  /__/||           `__||___\_
+    		|_|    ! |____/    | /||             \_______\_
+    		|_|    !^||_!/   " /__||               \_______|      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -758,7 +829,7 @@ def dungeonhealer2(healername)
 end   
 
 def battlehud(enemiename)
-	puts $player_name +	" HP: " + currenthp + '/' + hp + "-----VS.-----" + enemiename 
+	puts $player_name +	" HP: " + $currenthp + '/' + hp + "-----VS.-----" + enemiename 
 end
 
 clear
