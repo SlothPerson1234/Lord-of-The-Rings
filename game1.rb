@@ -135,6 +135,25 @@ class Volume2
 	end
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Volume3
 	def initialize
 		puts "You wake up, in a small room, with a halway stretching out from it. 3 goblins attack. Do you attempt to run past them, or do you attack them?"
@@ -181,7 +200,7 @@ _________________###|           |
 		else fight == "defend" or fight == "Defend"
 			clear 
 			battlehud("Goblins")
-			puts "You dodge their blows, than imidiatly attack, removing the arms of the Goblins. They die."
+			puts "You dodge their blows, then imidiatly attack, removing the arms of the Goblins. They die."
 			timer(5)
 			room1
 		else
@@ -232,11 +251,19 @@ _________________###|           |
 			timer(5)
 			clear 
 			room1
-		else room1crucial == "Walk" or room1crucial == "walk"
+		elsif room1crucial == "Walk" or room1crucial == "walk"
+			clear
+			room2
 
+		else
+			
+			room1
 
 		end
 	
+	end
+
+	def room2
 	end
 
 
@@ -754,7 +781,7 @@ def dungeonhealer1(healername)
     if healer1 == 'Pool' or healer1 == 'pool'
     	clear
     	puts '
-				    / /   ___      ___\__\
+				     / /   ___      ___\__\
 		           /_/___/___ }__/__  \____\
 		          /__/__//____|///  //|  \  \
 		         .__/ _//____|///__//_|___\__\_/\
@@ -764,17 +791,17 @@ def dungeonhealer1(healername)
 		         /|_|   |~^)|       /~j\ |___L_|
 		          || \   `"`       ^ _,/ /____/|j
 		          || l|        `     `"  //j/ __\
-		          |"_`]                ^/j?|____\
+		          |"_`]                ^/j?|_____\
 		         |__|_|\       _       ///\_|_____\
 		         |_|__|__\            / J/ __|_|___|
 		        ,_i__|_|| \          / J/___||_|____\
-     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
-    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___\
-    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___\
-    		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
-    		|_|   !/ |/-__7/  /__/||           `__||___\_
+     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_\___|
+    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_\___\
+    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_\___\
+    		|_|  || !| ||__|/   //:"/         ,__!:\___|
+    		|_|   !/ |/-__7/   /_/||           `__||___\_
     		|_|    ! |____/    | /||             \_______\_
-    		|_|    !^||_!/   " /__||               \_______|      
+    		|_|    !^||_!/   " /__| \              \_______\      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -806,17 +833,17 @@ def dungeonhealer2(healername)
 		         /|_|   |~^)|       /~j\ |___L_|
 		          || \   `"`       ^ _,/ /____/|j
 		          || l|        `     `"  //j/ __\
-		          |"_`]                ^/j?|____\
+		          |"_`]                ^/j?|_____\
 		         |__|_|\       _       ///\_|_____\
 		         |_|__|__\            / J/ __|_|___|
 		        ,_i__|_|| \          / J/___||_|____\
-     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_|___|
-    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_|___\
-    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_|___\
-    		|_|  || !| ||__|/  /_/:"/         ,__!:|___|
+     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_\___|
+    		  ___/!|_| |_|__j _ -- `  _/= `=|__|_\___\
+    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_\___\
+    		|_|  || !| ||__|/  /_/:"/         ,__!:\___|
     		|_|   !/ |/-__7/  /__/||           `__||___\_
     		|_|    ! |____/    | /||             \_______\_
-    		|_|    !^||_!/   " /__||               \_______|      
+    		|_|    !^||_!/   " /__||               \_______\      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -1307,3 +1334,4 @@ puts "Difficulty: Absulute Beginner"
 puts "Warning: this level is a dungeon, that means it is the final level before a boss"
 hint1 = rand(10)
 v3 = Volume3.new
+
