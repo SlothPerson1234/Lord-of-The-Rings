@@ -137,23 +137,6 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Volume3
 	def initialize
 		puts "You wake up, in a small room, with a halway stretching out from it. 3 goblins attack. Do you attempt to run past them, or do you attack them?"
@@ -197,7 +180,7 @@ _________________###|           |
 			puts "You lunge, cleaving the heads of the goblins from their shoulders. You reign victorious."
 			timer(5)
 			room1
-		else fight == "defend" or fight == "Defend"
+		elsif fight == "defend" or fight == "Defend"
 			clear 
 			battlehud("Goblins")
 			puts "You dodge their blows, then imidiatly attack, removing the arms of the Goblins. They die."
@@ -264,6 +247,21 @@ _________________###|           |
 	end
 
 	def room2
+		clear 
+		hud
+		puts "################################
+ ___________ ####### ___________
+|           |_______|   ______  |
+|  Arival    _______   (      ) |
+|___________|#######|     *     |
+_________________###|           |
+<-----  Exit     |##|   [] []   |
+|_____________   |##|           |
+##############|  |__|   [] []   /
+##############|________________/#"
+		puts ""
+
+
 	end
 
 
@@ -345,7 +343,8 @@ end
 				
 def hud
 		
-		puts "HP: " + $hp.to_s + "/" + $currenthp.to_s + " " + "Money: " + $cash.to_s + "₨ Armor: " + $armorname + "Weapon: " + $weapon + "																		" + "Runes: " + $totalrunes.to_s
+		puts "|HP: " + $hp.to_s + "/" + $currenthp.to_s + "  " + "Money: " + $cash.to_s + "₨ Armor: " + $armorname + " Weapon: " + $weapon + " 																	" + "Runes: " + $totalrunes.to_s + "|
+		_____________________________________________________________________________________________________________________________________"
 		
 end	
 	
