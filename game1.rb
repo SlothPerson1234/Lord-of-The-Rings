@@ -259,7 +259,31 @@ _________________###|           |
 |_____________   |##|           |
 ##############|  |__|   [] []   /
 ##############|________________/#"
-		puts ""
+		puts "You walk acrros the bridge, entering a large room. Collumns line it, a chest sitting on an altar near the passage you entered from. Another passage als leads out of the room. Do you open the chest, go back, or go to the next room?"
+		puts "Open"
+		puts "Back"
+		puts "Forward"
+		print "<]<]^3^[>[>:"
+		room2crucial = gets.chomp.to_s
+
+		if room2crucial == "Open" or room2crucial == "open"
+			puts "The chest lays on the altar. You pry its lid open. A majesticaly carved dagger lies before you. Its sheen shows you that it is valued highly. Do you take it?"
+			puts "Yes"
+			puts "No"
+			print "<]<]^3^[>[>:"
+			choicetoreciveultimatepoweratearlylevel = gets.chomp.to_s
+
+			if choicetoreciveultimatepoweratearlylevel == "Yes" or choicetoreciveultimatepoweratearlylevel == "yes"
+				clear
+				$
+			elsif 
+			else
+			end	
+			
+			
+		end
+
+
 
 
 	end
@@ -270,11 +294,12 @@ end
 
 #stats
 $ac = 0
-$atcsppeed = 0
+$atcspeed = 0
 $attack = 0
 $baseatc = 0
 $defense = 0
 $hp = 10
+$specialabilityset = 0
 $currenthp = $hp
 $player_name= ""
 $randgedatc = 5
@@ -858,6 +883,31 @@ def battlehud(enemiename)
 	puts $player_name +	" HP: " + $currenthp + '/' + hp + "-----VS.-----" + enemiename 
 end
 
+def specialidentifier
+	if $specialabilityset == 0
+
+	elsif $specialabilityset == 1
+		assasin
+	elsif $specialabilityset == 2
+		brawler
+	elsif $specialabilityset == 3
+		knight
+	elsif $specialabilityset == 4
+		demonicwarrior
+	elsif $specialabilityset == 5
+		angelicwarrior
+	elsif $specialabilityset == 6
+		swordsman
+	elsif $specialabilityset == 7
+		ninja
+	elsif $specialabilityset == 8
+		moneymaker
+	elsif $specialabilityset == 9
+		mage
+	else
+	end	
+end
+
 clear
 timer(3)
 puts "  
@@ -1175,23 +1225,23 @@ def segment2
 	when "1", "commoner's longsword", "longsword"
 		$weapon = "Commoner's longsword"
 		$attack = 2
-		$atcsppeed = 5
+		$atcspeed = 5
 	when "2", "commoner's daggers", "dagger"
 		$weapon = "Commoner's daggers"
 		$attack = 5.1
-		$atcsppeed = 2
+		$atcspeed = 2
 	when "3", "commoner's claymore", "claymore"
 		$weapon = "Commoner's claymore"
 		$attack = 10
-		$atcsppeed = 1
+		$atcspeed = 1
 	when "4", "commoner's lance", "lance"
 		$weapon = "Commoner's lance"
 		$attack = 3
-		$atcsppeed = 3
+		$atcspeed = 3
 	when "5", "commoner's shortsword", "shortsword"
 		$weapon = "Commoner's shortsword"
 		$attack = 4
-		$atcsppeed = 2.5
+		$atcspeed = 2.5
 	else
 		clear
 		segment2
@@ -1329,7 +1379,7 @@ v2 = Volume2.new
 puts ""
 puts "Volume 3:"
 puts "The Castle of the Warlord"
-puts "Difficulty: Absulute Beginner"
+puts "Difficulty: Beginner"
 puts "Warning: this level is a dungeon, that means it is the final level before a boss"
 hint1 = rand(10)
 v3 = Volume3.new
