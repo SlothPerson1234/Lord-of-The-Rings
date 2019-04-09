@@ -1090,17 +1090,17 @@ def segment1
 	defense = 5
 	speed = 8
 	stamina = 12
-	2. 🗡Elf:
+	2. 🗡 Elf:
 	defense = 3
 	speed = 11
 	stamina = 10
 	Elvish bow mastery: you gain a ranged attack speed  of 2
-	3. 💎Dwarf:
+	3. 💎 Dwarf:
 	defense = 11
 	speed = 3
 	stamina = 10
 	Dwarvish strength: you gain at base attack of 2
-	4. 🎲Hobbit:
+	4. 🎲 Hobbit:
 	defense = 11
 	speed = 11
 	stamina = 3
