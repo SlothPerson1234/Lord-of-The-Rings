@@ -1,3 +1,4 @@
+#Machine Requirements: Have a Mac or an installed ruby version > 2.0run this in your terminal (for mac it's Terminal.app in your applications folder)
 class Volume2
 	def initialize
 		hud
