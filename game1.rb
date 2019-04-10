@@ -1115,6 +1115,7 @@ intro
 
 print "🌾: "
 play = gets.chomp.to_s
+if play == "yes" or play == "Yes"
 if play.start_with? "y"
 	clear
 
@@ -1129,7 +1130,6 @@ print "[{1}]:"
 #gets player input
 $player_name = gets
 #removes new line after name
-
 $player_name = $player_name.chomp
 clear
 def segment1
