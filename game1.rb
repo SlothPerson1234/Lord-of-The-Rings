@@ -260,7 +260,7 @@ _________________###|           |
 |_____________   |##|           |
 ##############|  |__|   [] []   /
 ##############|________________/#"
-		puts "You walk acrros the bridge, entering a large room. Collumns line it, a chest sitting on an altar near the passage you entered from. Another passage als leads out of the room. Do you open the chest, go back, or go to the next room?"
+		puts "You walk across the bridge, entering a large room. Collumns line it, a chest sitting on an altar near the passage you entered from. Another passage als leads out of the room. Do you open the chest, go back, or go to the next room?"
 		puts "Open"
 		puts "Back"
 		puts "Forward"
@@ -276,16 +276,57 @@ _________________###|           |
 
 			if choicetoreciveultimatepoweratearlylevel == "Yes" or choicetoreciveultimatepoweratearlylevel == "yes"
 				clear
-				$
-			elsif 
+				$currenthp -= 1
+				$hp = $currenthp
+				$weapon = 'Pain Bringer'
+				$specialabilityset = 1
+				$attack = 10
+				$attackspeed = 2
+				hud
+				puts "You grip the hilt of the daggger. As you pull it out of its majestic resting place, you feel some of your life force slipping away. Rays of light apear to be shining from the blade. You walk through the door you saw earlier and into the next room..."
+				timer(5)
+				clear
+				room3
+
+
 			else
+				clear
+				room2
 			end	
+		elsif room2crucial == "Forward" room2crucial == "forward"
+			clear
+			room3
+		else
+			clear
+			room2
 			
 			
 		end
+	end
 
+	def room3intr
+		hud
+		puts "
+________________________________
+Arival ---->                    |
+|                   ()          |
+|                   ()          |
+|                   ()          |
+|_____________      ||________  |
+|    _______________||#######|  |
+|                   ||#######|  |
+|_________________  ||#######|  |
+|   ________________||#######|  |
+|                   ||_______|  |
+|                   Exit ----->  
+|_______________________________| 
+"
+		puts "You walk into a large room, with a cavernous cealing above. 2 gobblins attack."
+		gobblinattack(100, 100)
+		room3blank
+	end
 
-
+	def gobblinattack(hp, hp2)
 
 	end
 
@@ -316,7 +357,7 @@ $bow = "Commoner's shortbow"
 $cash = 0
 $race = ""
 $weapon = ""
-$rank = 0
+$rank = 1
 
 #runes
 $totalrunes = 0
@@ -907,6 +948,10 @@ def specialidentifier
 		mage
 	else
 	end	
+end
+
+def assasin(atckvalue)
+	atckvalue = ((($attack + $baseatc) * $attackspeed) + 90) * $rank
 end
 
 clear
