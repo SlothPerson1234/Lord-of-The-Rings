@@ -1,9 +1,0 @@
-Replace text with apropriate inside  **. This is best done during the game.
-Name: ** 
-Race: **
-Starting weapon: **
-<<<<<<<<Volume 1>>>>>>>>>
-Choice 1: **
-Choice 2: **
-Choice ?: **
-Up to where you end, continuing with volume divisions. You may die during this process, so use of this template is optional and not recomended.

@@ -1,4 +1,103 @@
 #Machine Requirements: Have a Mac or an installed ruby version > 2.0run this in your terminal (for mac it's Terminal.app in your applications folder)
+class Volume1
+	def initialize
+		puts "Volume 1:"
+		puts "The Journy to Minas Tirith"
+		puts "Difficulty: Tutorial"
+
+		puts "	You are traveling as an escort to Minas Tirith, protecting a wealthy dwarf merchant. This party is following an old trail just south of the main rode.
+		The merchant belives that it will be safer, with less risk of bandits."
+		puts "	Suddenly, 2 orcs jump out of the bushes. They are unarmed. The merchent flees. What do you do?"
+		puts "Defend"
+		puts "Attack"
+		print "[{1}]:"
+		battle1 = gets.chomp
+		clear
+		case battle1.downcase
+		when "defend"
+			puts "Your defense causes you to find an opening. You slice the orc's heads off with one blow."
+		when "attack"
+			puts "You unleash a flurry of attacks which leave the orcs laying unconscious on the ground. You quickly finish the job."
+		else
+			puts "☠️You stand their mumbiling to your self. The orcs murder you. They carve an eye on your forehead and begin to loot your body. Come back when 
+			you know how to play this game.☠️"
+			abort
+		end
+
+		puts "Behind you is a single Oruk-Hai riding a horse. You mount the rich man's steed and begin to run. Do you turn around and fire an arrow at the oncoming Oruk-Hai, or do you ride away?"
+		puts "Ride"
+		puts "Attack"
+		print "[{1}]:"
+		battle2 = gets.chomp
+		battle2 = battle2
+		clear
+		case battle2.downcase
+		when "ride"
+			puts "You ride vigorously until you see the blooming tree of Gondor. The Oruk-Hai whistles. 29 more appear."
+		when "attack"
+			$arrows -= 1
+			puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
+
+			puts "current ac: " + $ac.to_s
+
+			puts "current ac: " + $armour.to_s
+
+			puts "armor's ac: 9"
+			puts "current armor name: " + $armorname
+			puts "options:"
+			puts "Take"
+			puts "Keep"
+			print "[{1}]:"
+			choice1 = gets.chomp
+			clear
+			if choice1 == "Take" or choice1 == "take"
+				puts "You dawn the armor"
+				$ac = 9
+				$armourname = "Eye of Sauron Oruk-Hai armor"
+		
+			else
+				puts "Too bad🙁."
+				puts "I hope you don't regret your choice in the future."
+	
+			end
+
+			puts "Now, do you take the Oruk-Hai scymitar, or keep your old weapon?"
+			puts "options:"
+			puts "Take"
+			puts "Keep"
+			print "[{1}]:"
+			choice2 = gets.chomp
+
+			if choice1 == "Take" or choice1 == "take"
+				puts "You take the scimitar"
+				$attack = 6
+				$attackspeed = 4.75
+				$weapon = "Oruk-Hai scimitar"
+		
+			else
+				puts "Too bad🙁."
+				puts "I hope you don't regret your choice in the future."
+			end
+			puts "soon, 30 more Oruk-Hai appear. You begin to ride."
+	
+		else
+			puts "You die, because you just sit there with your head lulled back."
+			abort
+		end
+		puts "Soon, you arrive at the gates of Minas Tirith, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
+
+		puts ""
+		puts "Volume 2:"
+		puts "The Seige of Minas Tirith"
+		puts "Difficulty: Absulute Beginner"
+		puts ""
+		hint1 = rand(10)
+		hints(hint1)
+		puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.'
+		v2 = Volume2.new
+	end
+end
+
 class Volume2
 	def initialize
 		hud
@@ -133,6 +232,14 @@ class Volume2
 
 	def tower
 		puts "You see fire scorching the the tower. Ruble flies off, exposing the top of the staircase. A dragon shoves the Ruble off, ignoring the countless arrows. The dragon blinks, then it opens a third yellow blood shot eye eye on its forehead. You run up to the tower, the dragon knocks you off. You faint, and are scooped up by the dragon."
+		puts ""
+		puts "Volume 3:"
+		puts "The Castle of the Warlord"
+		puts "Difficulty: Beginner"
+		puts "Warning: this level is a dungeon, that means it is the final level before a boss"
+		hint1 = rand(10)
+		v3 = Volume3.new
+
 	end
 end
 
@@ -293,7 +400,7 @@ _________________###|           |
 				clear
 				room2
 			end	
-		elsif room2crucial == "Forward" room2crucial == "forward"
+		elsif room2crucial == "Forward" or room2crucial == "forward"
 			clear
 			room3
 		else
@@ -322,13 +429,50 @@ Arival ---->                    |
 |_______________________________| 
 "
 		puts "You walk into a large room, with a cavernous cealing above. 2 gobblins attack."
+		timer(5)
+		clear
 		gobblinattack(100, 100)
 		room3blank
 	end
 
-	def gobblinattack(hp, hp2)
+	def gobblinattack(hp1, hp2)
+		puts "__" + $player_name + "____Vs.____Goblins__"
+		timer(2)
+		clear
+		if (hp1 > 0 and hp2 > 0 and $hp > 0)
+			hud
+			puts 'Do you attack or defend?'
+			print "<]<]^3^[>[>:"
+			choice = gets.to_s.chomp
+			if choice == "Attack" or choice == "attack"
+				clear
+				puts "Will you use a ranged or a melee attack, or use your special?"
+				puts "Ranged"
+				puts "Melee"
+				puts "Special"
+				print "<]<]^3^[>[>:"
+				atckgob = gets.chomp.to_s
+
+				if atckgob == "ranged" or atckgob == "Ranged"
+					
+				end
+
+			elsif choice == "Defend" or choice == "defend"
+				
+			else
+				gobblinattack(hp1, hp2)
+			end
+
+				
+
+
+		end
+
+
 
 	end
+
+
 
 
 
@@ -869,7 +1013,7 @@ def dungeonhealer1(healername)
     		|_|    ! |____/    | /||             \_______\_
     		|_|    !^||_!/   " /__| \              \_______\      
 		---------------------------------------------------'
-		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
+		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero, who has a great destiny that when fufilled, the first step in thy long and difficult path to restoration of thine hallowed earth shall be complete and Eru Ilúvatar shall be praised with the highest glory."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
 		dungeonhealer2(healername)
     elsif healer1 == 'exit' or healer1 == 'Exit'
@@ -911,7 +1055,7 @@ def dungeonhealer2(healername)
     		|_|    ! |____/    | /||             \_______\_
     		|_|    !^||_!/   " /__||               \_______\      
 		---------------------------------------------------'
-		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero."'
+		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero, who has a great destiny that when fufilled, the first step in thy long and difficult path to restoration of thine hallowed earth shall be complete and Eru Ilúvatar shall be praised with the highest glory."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
 		dungeonhealer2(healername)
     elsif healer1 == 'exit' or healer1 == 'Exit' 
@@ -1132,8 +1276,9 @@ clear
 
 
 
-
-puts ' 
+def intro
+	def initialize
+	puts ' 
        + +    *    *     + +     
        / \    )\__/(     / \       
       /   \  (__()__)   /   \      
@@ -1147,37 +1292,126 @@ puts '
  |/     +       ((        +     \| 
  +               V               + 
                  *                   '
-puts "Please type names and commands exactly as said."
-puts "For the best expirience, play in full screen."
-puts "Click control =. Do so again 9 times"
-puts "Do you wish to play?"
+		puts "Please type names and commands exactly as said."
+		puts "For the best expirience, play in full screen."
+		puts "Click control =. Do so again 9 times"
+		puts "_____________________________________________"
+		puts "New"
+		puts "Load"
+		print "🌾: "
+		play = gets.chomp.to_s
+		if play == "new" or play == "New"
+		elsif play == "Load" or play == "load"
+			clear
+			puts "What file do you want to load?"
+			save = gets.chomp.to_s
+			clear
+			File.open(save, "r")do |file|
+   		 	save = file.readlines
+		
+			$ac = save[0].to_i
+			$atcspeed = save[1].to_i
+			$attack = save[2].to_i
+			$baseatc = save[3].to_i
+			$defense = save[4].to_i
+			$hp = save[5].to_i
+			$specialabilityset = save[6].to_i
+			$currenthp = save[7].to_i
+			$player_name= save[8].to_s
+			$randgedatc = save[9].to_i
+			$randgedatcspeed = save[10].to_i
+			$sheilddef = save[11].to_i
+			$speed = save[12].to_i
+			$stamina = save[13].to_i
+			$armorname = save[14].to_s
+			$arrows = save[15].to_i
+			$bow = save[16].to_s
+			$cash = save[17].to_i
+			$race = save[18].to_s
+			$weapon = save[19].to_s
+			$rank = save[20].to_i
+			$totalrunes = save[21].to_i
+			$dr = save[21].to_i
+			$hr = save[22].to_i
+			$pr = save[23].to_i
+			$magedamadge = save[24].to_i
+			$mageacuracy = save[25].to_i
+			$magedef = save[26].to_i
+			volume = save[-1].to_i
 
-puts <<~intro
-Please type names and commands exactly as said.
-For the best expirience, play in full screen.
-Click control =. Do so again 9 times
-Do you wish to play?
-intro
+			if volume ==  8910653891830182678991008822335878294027492492384
+				clear
+				puts "Soon, you arrive at the gates of Minas Tirith, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
 
-print "🌾: "
-play = gets.chomp.to_s
-if play == "yes" or play == "Yes"
-if play.start_with? "y"
-	clear
-
-else
-	clear
-	puts "Then why the heck did you run this file???"
-	puts "Plz actualy play."
-	abort
+				puts ""
+				puts "Volume 2:"
+				puts "The Seige of Minas Tirith"
+				puts "Difficulty: Absulute Beginner"
+				puts ""
+				hint1 = rand(10)
+				puts hint1
+				puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.'
+				v2 = Volume2.new
+			elsif volume == 33333333333388183838393843933893939393939393920
+				clear
+				puts ""
+				puts "Volume 3:"
+				puts "The Goblin mountain"
+				puts "Difficulty: Beginner"
+				puts "Warning, this is a dungeon, that means it is the level before a boss."
+				hint1 = rand(10)
+				puts hint1
+			else
+				clear
+				puts "this is an invalid file you are an idiot for thinking you could fool me, muahahahahhahahahahahahahaha!"
+				timer(5)
+				clear
+				puts "A problem has been detected and all systems have been shut down to protect your computer"
+				timer(1)
+				puts ""
+				puts "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
+				puts ""
+				timer(3)
+				puts "If this is the first time you've seen this stop error screen, restart your computer, if this screen appears again, follow 
+                these steps: "
+                puts ""
+                puts "Check to make sure any new hardware or software is properly installed. If this is a new installation, ask your hardware or
+                software manufacturer for any system updates you might need."
+                puts ""
+                puts "If problems continue, disable or remove any newly instaled hardware 
+                or software. Disable Bios memory options such as caching or shadowing.
+                If you need to use Safe Mode to remove or disable components, restart
+                your computer, press F8 to select Advanced Startup Options, and then
+                select Safe Mode."
+                puts ""
+                puts "Technical information:"
+                puts "*** STOP: 0x000000D1 (0x0000000C, 0x00000002, 0x00000000, 0xF86BSA89)"
+                puts "***		*****.sys - Adress ******** base at ********, DateStamp ********"
+                timer(6)
+                puts "Beginning dump of physical memory"
+                timer(12)
+                puts "Physical memory dump complete."
+                puts "Contact your system administrator or technical support group for further 
+                assistance."
+                timer(300)
+                abort
+            end
+            File.close
+		else
+			clear
+			puts "Then why the heck did you run this file???"
+			puts "Plz actualy play."
+			abort
+		end
+		puts "Welcome to the land of Middle Earth. What is your name young one?"
+		print "[{1}]:"
+		#gets player input
+		$player_name = gets
+		#removes new line after name
+		$player_name = $player_name.chomp
+		clear
+		segment1
 end
-puts "Welcome to the land of Middle Earth. What is your name young one?"
-print "[{1}]:"
-#gets player input
-$player_name = gets
-#removes new line after name
-$player_name = $player_name.chomp
-clear
 def segment1
 	puts "Now, "+ $player_name + ", what is your race?"
 	puts <<~PlayerSelect
@@ -1237,11 +1471,11 @@ def segment1
 		clear
 		segment1
 	end
+	segment2
 end
 
 
-segment1
-clear
+		
 def segment2
 
 	puts "Now, " + $player_name + " The " + $race + ", what melee weapon do you prefer. If it is not there, do not worry, you will find weapons later in your adventures. In addition to this weapon, you will gain a Commoner's bow (ranged attack: 5), and 20 normal arrows"
@@ -1292,141 +1526,39 @@ def segment2
 		clear
 		segment2
 	end
-end
+		end
 
-segment2
-clear
+		segment2
+		clear
 
-puts "So you wish to use the " + $weapon + "? Interesting choice. Now to begin...."
-timer(2)
-clear
+		puts "So you wish to use the " + $weapon + "? Interesting choice. Now to begin...."
+    	timer(2)
+    	clear
 
 
-#open this for seizure	
-if true && $player_name.downcase != "skip"
-	sentence1 = "A long time ago a poor town lived near a Dragon's lair."
-	sentence2 = "One day a powerful wizard took pity on the town."
-	sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
-	sentence4 = "On the day the Wizard was supposed to leave the town with the gem, citizens attempted to stop him."
-	sentence5 = "Outraged, he removed the sleeping charm on the Dragon, and rode away."
-	sentence6 = "The Dragon ravaged the town."
-	sentence7 = "Meanwhile, the Wizard, who's name is Fairûman the white, sat, ploting, in the tower, Bara-Dûr..."
+		if true && $player_name.downcase != "skip"
+			sentence1 = "A long time ago a poor town lived near a Dragon's lair."
+			sentence2 = "One day a powerful wizard took pity on the town."
+			sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
+			sentence4 = "On the day the Wizard was supposed to leave the town with the gem, citizens attempted to stop him."
+			sentence5 = "Outraged, he removed the sleeping charm on the Dragon, and rode away."
+			sentence6 = "The Dragon ravaged the town."
+			sentence7 = "Meanwhile, the Wizard, who's name is Fairûman the white, sat, ploting, in the tower, Bara-Dûr..."
 
 	#Combine all sentences into single array
-	intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
+			intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
 
 	#For each sentence...
-	intro.each do |sentence|
+			intro.each do |sentence|
 		#...split each char into an array indecie, and then run loop on every indecie.
-		sentence.split(%r{}).each do |char| 
-			print char
-			timer(0.20)
+			sentence.split(%r{}).each do |char| 
+				print char
+				timer(0.20)
 		end
 		#After last char, pause and clear screen, the move to next sentence
 		timer(2)
 		clear
-	end
-end
-puts "Volume 1:"
-puts "The Journy to Minas Tirith"
-puts "Difficulty: Tutorial"
-
-puts "	You are traveling as an escort to Minas Tirith, protecting a wealthy dwarf merchant. This party is following an old trail just south of the main rode.
-The merchant belives that it will be safer, with less risk of bandits."
-puts "	Suddenly, 2 orcs jump out of the bushes. They are unarmed. The merchent flees. What do you do?"
-puts "Defend"
-puts "Attack"
-print "[{1}]:"
-battle1 = gets.chomp
-clear
-case battle1.downcase
-	when "defend"
-	puts "Your defense causes you to find an opening. You slice the orc's heads off with one blow."
-when "attack"
-	puts "You unleash a flurry of attacks which leave the orcs laying unconscious on the ground. You quickly finish the job."
-else
-	puts "☠️You stand their mumbiling to your self. The orcs murder you. They carve an eye on your forehead and begin to loot your body. Come back when 
-	you know how to play this game.☠️"
-	abort
-end
-
-puts "Behind you is a single Oruk-Hai riding a horse. You mount the rich man's steed and begin to run. Do you turn around and fire an arrow at the oncoming Oruk-Hai, or do you ride away?"
-puts "Ride"
-puts "Attack"
-print "[{1}]:"
-battle2 = gets.chomp
-battle2 = battle2
-clear
-case battle2.downcase
-when "ride"
-	puts "You ride vigorously until you see the blooming tree of Gondor. The Oruk-Hai whistles. 29 more appear."
-when "attack"
-	$arrows -= 1
-	puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
-
-	puts "current ac: " + $ac.to_s
-
-	puts "current ac: " + $armour.to_s
-
-	puts "armour's ac: 9"
-	puts "current armor name: " + $armorname
-	puts "options:"
-	puts "Take"
-	puts "Keep"
-	print "[{1}]:"
-	choice1 = gets.chomp
-	clear
-	if choice1 == "Take" or choice1 == "take"
-		puts "You dawn the armor"
-		$ac = 9
-		$armourname = "Eye of Sauron Oruk-Hai armor"
-		
-	else
-		puts "Too bad🙁."
-		puts "I hope you don't regret your choice in the future."
-	
+		volume1 = Volume1.new
 	end
 
-	puts "Now, do you take the Oruk-Hai scymitar, or keep your old weapon?"
-	puts "options:"
-	puts "Take"
-	puts "Keep"
-	print "[{1}]:"
-	choice2 = gets.chomp
-
-	if choice1 == "Take" or choice1 == "take"
-		puts "You take the scimitar"
-		$attack = 6
-		$attackspeed = 4.75
-		$weapon = "Oruk-Hai scimitar"
-		
-	else
-		puts "Too bad🙁."
-		puts "I hope you don't regret your choice in the future."
-	end
-	puts "soon, 30 more Oruk-Hai appear. You begin to ride."
-	
-else
-	puts "You die, because you just sit there with your head lulled back."
-	abort
 end
-
-puts "Soon, you arrive at the gates of Minas Tirith, barely making it through, for they are begining to close the gates, for the once 30 figures riding behind you had turned to a few thousand, some larger than others."
-
-puts ""
-puts "Volume 2:"
-puts "The Seige of Minas Tirith"
-puts "Difficulty: Absulute Beginner"
-puts ""
-hint1 = rand(10)
-hints(hint1)
-puts 'As you enter the gates, a figure quickly runs up to you and requests, "Help man the walls, I do not care if thy is no soldier, we need all avalable persona to help defend our city from ocupation by these servents of θaʊron." The elvish name rolled off his throat like a foul breath. After he whisperd it, the elvish name seemed to stir power, as if it invoked the anger of the deity its self. You run to the center of Gondor.'
-v2 = Volume2.new
-puts ""
-puts "Volume 3:"
-puts "The Castle of the Warlord"
-puts "Difficulty: Beginner"
-puts "Warning: this level is a dungeon, that means it is the final level before a boss"
-hint1 = rand(10)
-v3 = Volume3.new
-
