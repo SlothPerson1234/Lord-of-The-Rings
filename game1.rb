@@ -454,6 +454,10 @@ Arival ---->                    |
 				atckgob = gets.chomp.to_s
 
 				if atckgob == "ranged" or atckgob == "Ranged"
+
+				elsif atckgob == "Melee" or atckgob == "melee"
+
+				elsif atckgob == "Special" or atckgob == "special"
 					
 				end
 
