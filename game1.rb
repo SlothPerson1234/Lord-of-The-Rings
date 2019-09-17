@@ -483,6 +483,7 @@ Arival ---->                    |
 end
 
 #stats
+$sp = ""
 $ac = 0
 $atcspeed = 0
 $attack = 0
@@ -497,6 +498,7 @@ $randgedatcspeed = 0
 $sheilddef = 0
 $speed = 0
 $stamina = 0
+$atckvalue = 0
 
 #advanced stats
 $armorname = ""
@@ -513,7 +515,7 @@ $dr = 0
 $hr = 0
 $pr = 0
 
-#stats so advanced you won't use often them until volume 20
+#stats so advanced you won't use often them until volume 5
 $magedamadge = 0
 $mageacuracy = 0
 $magedef = 0
@@ -1077,31 +1079,66 @@ def specialidentifier
 	if $specialabilityset == 0
 
 	elsif $specialabilityset == 1
-		assasin
+		$sp = "assasin"
 	elsif $specialabilityset == 2
-		brawler
+		$sp = "brawler"
 	elsif $specialabilityset == 3
-		knight
+		$sp = "knight"
 	elsif $specialabilityset == 4
-		demonicwarrior
+		$sp = "demonicwarrior"
 	elsif $specialabilityset == 5
-		angelicwarrior
+		$sp = "angelicwarrior"
 	elsif $specialabilityset == 6
-		swordsman
+		$sp = "swordsman"
 	elsif $specialabilityset == 7
-		ninja
+		$sp = "ninja"
 	elsif $specialabilityset == 8
-		moneymaker
+		$sp = "moneymaker"
 	elsif $specialabilityset == 9
-		mage
+		$sp = "mage"
 	else
 	end	
 end
 
-def assasin(atckvalue)
-	atckvalue = ((($attack + $baseatc) * $attackspeed) + 90) * $rank
+def assasin
+	$atckvalue = ((($attack + $baseatc) * $attackspeed) + 100) * ($rank + 1)
 end
 
+def brawler
+	$atckvalue = ($attack + $baseatc + $baseatc + 400) * $rank   
+end
+
+def knight
+	$atckvalue = (((($attack + $baseatc) * 2) + $attackspeed) - 20) * $rank
+end
+
+def demonicwarrior
+	$atckvalue = ((900000 - $attack) * $baseatc) * ($rank + 2)
+	$currenthp -= 5 *$rank
+end
+
+def angelicwarrior
+	$atckvalue = 10 * $rank
+	$currenthp += 5 * $rank
+end
+
+def swordsman
+	$atckvalue = (99 + ($attack * 2)) * $rank
+end
+
+def ninja
+	$atckvalue = ($speed * $stamina * $attack) * $rank
+end
+
+def moneymaker
+	$cash += 2000 * $rank
+	$atckvalue = 100 * $rank
+	
+end
+
+def mage
+	$atckvalue = ($magedamadge + $magedef * $hp) * $rank + $magedef
+end
 clear
 timer(3)
 puts "  
