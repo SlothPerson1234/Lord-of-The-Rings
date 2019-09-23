@@ -1438,6 +1438,8 @@ def intro
                 abort
             end
             File.close
+		rescue
+			raise "Something went wrong with the game setup"
 		else
 			clear
 			puts "Then why the heck did you run this file???"
