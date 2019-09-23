@@ -1319,7 +1319,7 @@ clear
 
 def intro
 	def initialize
-	puts ' 
+		puts ' 
        + +    *    *     + +     
        / \    )\__/(     / \       
       /   \  (__()__)   /   \      
@@ -1438,8 +1438,7 @@ def intro
                 abort
             end
             File.close
-		rescue
-			raise "Something went wrong with the game setup"
+      end
 		else
 			clear
 			puts "Then why the heck did you run this file???"
@@ -1454,6 +1453,7 @@ def intro
 		$player_name = $player_name.chomp
 		clear
 		segment1
+	end
 end
 def segment1
 	puts "Now, "+ $player_name + ", what is your race?"
@@ -1545,63 +1545,63 @@ def segment2
 
 	# Weapon Select
 	case $weapon.downcase
-	when "1", "commoner's longsword", "longsword"
-		$weapon = "Commoner's longsword"
-		$attack = 2
-		$atcspeed = 5
-	when "2", "commoner's daggers", "dagger"
-		$weapon = "Commoner's daggers"
-		$attack = 5.1
-		$atcspeed = 2
-	when "3", "commoner's claymore", "claymore"
-		$weapon = "Commoner's claymore"
-		$attack = 10
-		$atcspeed = 1
-	when "4", "commoner's lance", "lance"
-		$weapon = "Commoner's lance"
-		$attack = 3
-		$atcspeed = 3
-	when "5", "commoner's shortsword", "shortsword"
-		$weapon = "Commoner's shortsword"
-		$attack = 4
-		$atcspeed = 2.5
-	else
-		clear
-		segment2
+		when "1", "commoner's longsword", "longsword"
+			$weapon = "Commoner's longsword"
+			$attack = 2
+			$atcspeed = 5
+		when "2", "commoner's daggers", "dagger"
+			$weapon = "Commoner's daggers"
+			$attack = 5.1
+			$atcspeed = 2
+		when "3", "commoner's claymore", "claymore"
+			$weapon = "Commoner's claymore"
+			$attack = 10
+			$atcspeed = 1
+		when "4", "commoner's lance", "lance"
+			$weapon = "Commoner's lance"
+			$attack = 3
+			$atcspeed = 3
+		when "5", "commoner's shortsword", "shortsword"
+			$weapon = "Commoner's shortsword"
+			$attack = 4
+			$atcspeed = 2.5
+		else
+			clear
+			segment2
 	end
-		end
 
-		segment2
-		clear
+	segment2
+	clear
 
-		puts "So you wish to use the " + $weapon + "? Interesting choice. Now to begin...."
-    	timer(2)
-    	clear
+	puts "So you wish to use the " + $weapon + "? Interesting choice. Now to begin...."
+  	timer(2)
+  	clear
 
 
-		if true && $player_name.downcase != "skip"
-			sentence1 = "A long time ago a poor town lived near a Dragon's lair."
-			sentence2 = "One day a powerful wizard took pity on the town."
-			sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
-			sentence4 = "On the day the Wizard was supposed to leave the town with the gem, citizens attempted to stop him."
-			sentence5 = "Outraged, he removed the sleeping charm on the Dragon, and rode away."
-			sentence6 = "The Dragon ravaged the town."
-			sentence7 = "Meanwhile, the Wizard, who's name is Fairûman the white, sat, ploting, in the tower, Bara-Dûr..."
+	if true && $player_name.downcase != "skip"
+		sentence1 = "A long time ago a poor town lived near a Dragon's lair."
+		sentence2 = "One day a powerful wizard took pity on the town."
+		sentence3 = "He put the Dragon to sleep, but not without a price; the Heart of Anundûr, the biggest gem in the Dragon's hoard."
+		sentence4 = "On the day the Wizard was supposed to leave the town with the gem, citizens attempted to stop him."
+		sentence5 = "Outraged, he removed the sleeping charm on the Dragon, and rode away."
+		sentence6 = "The Dragon ravaged the town."
+		sentence7 = "Meanwhile, the Wizard, who's name is Fairûman the white, sat, ploting, in the tower, Bara-Dûr..."
 
-	#Combine all sentences into single array
-			intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
+		#Combine all sentences into single array
+		intro = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7] 
 
-	#For each sentence...
-			intro.each do |sentence|
-		#...split each char into an array indecie, and then run loop on every indecie.
+		#For each sentence...
+		intro.each do |sentence|
+			#...split each char into an array indecie, and then run loop on every indecie.
 			sentence.split(%r{}).each do |char| 
 				print char
 				timer(0.20)
+			end
+			#After last char, pause and clear screen, the move to next sentence
+			timer(2)
+			clear
+			volume1 = Volume1.new
 		end
-		#After last char, pause and clear screen, the move to next sentence
-		timer(2)
-		clear
-		volume1 = Volume1.new
 	end
 
 end
