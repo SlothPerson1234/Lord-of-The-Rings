@@ -529,8 +529,12 @@ def timer(time)
 end
 
 def hints(hint)
-	print "Hint: "
-	case hint
+	print ' .--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--.
+/ .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \
+\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/ /
+ \/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /
+ / /\/ /`  /`  /`  /`  /`  /`  /`  /`  /`  /`  /`  /`  /`  /\/ /\
+/ /\ \/`-- `-- `-- `-- `-- `-- `-- `-- `-- `-- `-- `-- `-- \ \/\ \ '
 	when 0
 		puts "The difficulty depends on how much freedom you have and the estimated rate of death."
 	when 1
@@ -559,9 +563,12 @@ def hints(hint)
 end	
 				
 def hud
-		
-		puts "|HP: " + $hp.to_s + "/" + $currenthp.to_s + "  " + "Money: " + $cash.to_s + "₨ Armor: " + $armorname + " Weapon: " + $weapon + " 																	" + "Runes: " + $totalrunes.to_s + "|
-		_____________________________________________________________________________________________________________________________________"
+
+	while hp >= 1
+		print "█"
+	end	
+	puts "|HP: " + $hp.to_s + "/" + $currenthp.to_s + "  " + "Money: " + $cash.to_s + "₨ Armor: " + $armorname + " Weapon: " + $weapon + " 																	" + "Runes: " + $totalrunes.to_s + "|
+	________________________________________________________________________________________________________________________________"
 		
 end	
 	
@@ -1000,24 +1007,24 @@ def dungeonhealer1(healername)
 				     / /   ___      ___\__\
 		           /_/___/___ }__/__  \____\
 		          /__/__//____|///  //|  \  \
-		         .__/ _//____|///__//_|___\__\_/\
-		       /__//_/__/||||/ / !|___|_____\_| L
-		      / _// _/|// |/_-.   -7//|__|_____| (
-		     `  /|_|_|   /7nT/     |=_  V|__||__|\|
+		         .__/ _//____|///__//_|___\__\
+		       /__//_/__/||||/ / !|___|_____\_| 
+		      / _// _/|// |/_-.   -7//|__|_____| 
+		     `  /|_|_|   /7nT/     |=_  V|__||__|
 		         /|_|   |~^)|       /~j\ |___L_|
-		          || \   `"`       ^ _,/ /____/|j
+		          || \   `"`       ^ _,/ /____/|
 		          || l|        `     `"  //j/ __\
 		          |"_`]                ^/j?|_____\
 		         |__|_|\       _       ///\_|_____\
 		         |_|__|__\            / J/ __|_|___|
 		        ,_i__|_|| \          / J/___||_|____\
-     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_\___|
+     		  `_|i__|_||_ |`\_______/___/ /| |_\___|
     		  ___/!|_| |_|__j _ -- `  _/= `=|__|_\___\
-    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_\___\
-    		|_|  || !| ||__|/   //:"/         ,__!:\___|
-    		|_|   !/ |/-__7/   /_/||           `__||___\_
-    		|_|    ! |____/    | /||             \_______\_
-    		|_|    !^||_!/   " /__| \              \_______\      
+    		 /_/ |_|_|=|=|=|=///|_/_/ /       \__|_\___\
+    		|_|  || !| ||__|/    //:"/         ,__!:\___|
+    		|_|   !/ |/-__7/    /_/||           `__||___\_
+    		|_|    ! |____/     | /||             \_______\_
+    		|_|    !^||_/      / __| \              \_______\      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero, who has a great destiny that when fufilled, the first step in thy long and difficult path to restoration of thine hallowed earth shall be complete and Eru Ilúvatar shall be praised with the highest glory."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -1039,27 +1046,27 @@ def dungeonhealer2(healername)
     if healer1 == 'Pool' or healer1 == 'pool'
     	clear
     	puts '
-				    / /   ___      ___\__\
+				     / /   ___      ___\__\
 		           /_/___/___ }__/__  \____\
 		          /__/__//____|///  //|  \  \
-		         .__/ _//____|///__//_|___\__\_/\
-		       /__//_/__/||||/ / !|___|_____\_| L
-		      / _// _/|// |/_-.   -7//|__|_____| (
-		     `  /|_|_|   /7nT/     |=_  V|__||__|\|
+		         .__/ _//____|///__//_|___\__\
+		       /__//_/__/||||/ / !|___|_____\_| 
+		      / _// _/|// |/_-.   -7//|__|_____| 
+		     `  /|_|_|   /7nT/     |=_  V|__||__|
 		         /|_|   |~^)|       /~j\ |___L_|
-		          || \   `"`       ^ _,/ /____/|j
+		          || \   `"`       ^ _,/ /____/|
 		          || l|        `     `"  //j/ __\
 		          |"_`]                ^/j?|_____\
 		         |__|_|\       _       ///\_|_____\
 		         |_|__|__\            / J/ __|_|___|
 		        ,_i__|_|| \          / J/___||_|____\
-     		  `_|i__|_||_ |` __-  `|/ ___/ /| |_\___|
+     		  `_|i__|_||_ |`\_______/___/ /| |_\___|
     		  ___/!|_| |_|__j _ -- `  _/= `=|__|_\___\
-    		 /_/ |_|_|=|=|=|=///|_/_//       \__|_\___\
-    		|_|  || !| ||__|/  /_/:"/         ,__!:\___|
-    		|_|   !/ |/-__7/  /__/||           `__||___\_
-    		|_|    ! |____/    | /||             \_______\_
-    		|_|    !^||_!/   " /__||               \_______\      
+    		 /_/ |_|_|=|=|=|=///|_/_/ /       \__|_\___\
+    		|_|  || !| ||__|/    //:"/         ,__!:\___|
+    		|_|   !/ |/-__7/    /_/||           `__||___\_
+    		|_|    ! |____/     | /||             \_______\_
+    		|_|    !^||_/      / __| \              \_______\      
 		---------------------------------------------------'
 		puts 'An elvish maiden rises out of the pool. It apears that her blue dress is what you thought was water. She says, "My name is ' + healername + '💙. I am a healer. I can help you recover from your wounds. She strides forward and her hand comes to rest on your heart. She whispers elvish incantations too complex to  translate into common, but here is a breif translation: "May the grace and spirit of Eru Ilúvatar mend thy wonds that have falen upon this brave hero, who has a great destiny that when fufilled, the first step in thy long and difficult path to restoration of thine hallowed earth shall be complete and Eru Ilúvatar shall be praised with the highest glory."'
 		puts 'You leave the side of the pool. Behind you you see the healer lay down, her body becoming invisable among the folds of the dress that you had thought to be water.'
@@ -1315,30 +1322,65 @@ puts "
 timer(5)
 clear
 
+puts "  1111111        000000000          000000000          
+ 1::::::1      00:::::::::00      00:::::::::00        
+1:::::::1    00:::::::::::::00  00:::::::::::::00      
+111:::::1   0:::::::000:::::::00:::::::000:::::::0     
+   1::::1   0::::::0   0::::::00::::::0   0::::::0     
+   1::::1   0:::::0     0:::::00:::::0     0:::::0     
+   1::::1   0:::::0     0:::::00:::::0     0:::::0     
+   1::::l   0:::::0 000 0:::::00:::::0 000 0:::::0     
+   1::::l   0:::::0 000 0:::::00:::::0 000 0:::::0     
+   1::::l   0:::::0     0:::::00:::::0     0:::::0     
+   1::::l   0:::::0     0:::::00:::::0     0:::::0     
+   1::::l   0::::::0   0::::::00::::::0   0::::::0     
+111::::::1110:::::::000:::::::00:::::::000:::::::0     
+1::::::::::1 00:::::::::::::00  00:::::::::::::00      
+1::::::::::1   00:::::::::00      00:::::::::00        
+111111111111     000000000          000000000       "
+puts "╔═╗┌─┐┌┬┐┌┬┐┬┌┬┐┌─┐
+║  │ ││││││││ │ └─┐
+╚═╝└─┘┴ ┴┴ ┴┴ ┴ └─┘
+                   
+                "
+timer(5)
 
 
 def intro
 	def initialize
-		puts ' 
-       + +    *    *     + +     
-       / \    )\__/(     / \       
-      /   \  (__()__)   /   \      
- ____/_____\__\0  0/___/_____\____ 
-|             |\../|              |
-|              \__/               |
-|      <<<Before The Rings>>>     |
-|_________________________________|
- |    /\ /      ((       \ /\    | 
- |  /   V        ))       V   \  | 
- |/     +       ((        +     \| 
- +               V               + 
-                 *                   '
-		puts "Please type names and commands exactly as said."
-		puts "For the best expirience, play in full screen."
-		puts "Click control =. Do so again 9 times"
-		puts "_____________________________________________"
-		puts "New"
-		puts "Load"
+		puts '                                                                      |\      /|  
+                + +    *    *     + +                                 ||      ||
+                / \    )\__/(     / \                                 | \    / |
+               /   \  (__()__)   /   \                                |  |  |  |
+          ____/_____\__\0  0/___/_____\____                         |\|__|/\|__|/|
+         |             |\../|              |                        | |  /  \  | |
+         |              \__/               |                        | | /    \ | |
+         |      <<<Before The Rings>>>     |                         \|        |/
+         |     A story of Middle Earth     |                         _|        |_
+         |_________________________________|                         \_|      |_/
+          |    /\ /      ((       \ /\    |                            \      /
+          |  /   V        ))       V   \  |                            |  /\  |  
+          |/     +       ((        +     \|                            / /  \ \
+          +               V               +                           |  |  |  |
+                          *                                           |  |  |  |
+         Please type names and commands exactly as said.               \  \/  /
+         For the best expirience, play in full screen.                 |  /\  |
+         Click control =. Do so again 9 times                          |  \/  |
+                                                                       |      |
+         New                                                          /_      _\
+                                                                       |      |
+         Load                                                          |  /\  |
+                                                                    |\_|      |_/|
+                                                                    |  |      |  |
+                                                                    |  |      |  |
+                                                                    |  |      |  |
+                                                                    |   \    /   |
+                                                                    |\  /    \  /|
+                                                                    |/  \    /  \|
+                                                                   /____|____|___\
+                                                             _____/   |   |   |   \__
+                                                    ________/   ||    |   |   |      \_
+___________________________________________________/___________/  \___|___|___|________\______ '
 		print "🌾: "
 		play = gets.chomp.to_s
 		if play == "new" or play == "New"
@@ -1605,3 +1647,4 @@ def segment2
 	end
 
 end
+intro
