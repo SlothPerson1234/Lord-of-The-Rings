@@ -24,7 +24,7 @@ class Volume1
 			abort
 		end
 
-		puts "Behind you is a single Oruk-Hai riding a horse. You mount the rich man's steed and begin to run. Do you turn around and fire an arrow at the oncoming Oruk-Hai, or do you ride away?"
+		puts "Behind you is a single Uruk-Hai riding a horse. You mount the rich man's steed and begin to run. Do you turn around and fire an arrow at the oncoming Uruk-Hai, or do you ride away?"
 		puts "Ride"
 		puts "Attack"
 		print "[{1}]:"
@@ -36,7 +36,7 @@ class Volume1
 			puts "You ride vigorously until you see the blooming tree of Gondor. The Oruk-Hai whistles. 29 more appear."
 		when "attack"
 			$arrows -= 1
-			puts "The Oruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Oruk-Hai armor (ac 9) do you grab the armour?"
+			puts "The Uruk-Hai falls to the ground, dead. Dropping an Oruk-Hai scimitar (6 attack, 4.75 attack speed) and some Eye of Sauron Uruk-Hai armor (ac 9) do you grab the armour?"
 
 			puts "current ac: " + $ac.to_s
 
@@ -53,7 +53,7 @@ class Volume1
 			if choice1 == "Take" or choice1 == "take"
 				puts "You dawn the armor"
 				$ac = 9
-				$armourname = "Eye of Sauron Oruk-Hai armor"
+				$armourname = "Eye of Sauron Uruk-Hai armor"
 		
 			else
 				puts "Too bad🙁."
@@ -61,7 +61,7 @@ class Volume1
 	
 			end
 
-			puts "Now, do you take the Oruk-Hai scymitar, or keep your old weapon?"
+			puts "Now, do you take the Uruk-Hai scymitar, or keep your old weapon?"
 			puts "options:"
 			puts "Take"
 			puts "Keep"
@@ -72,13 +72,13 @@ class Volume1
 				puts "You take the scimitar"
 				$attack = 6
 				$attackspeed = 4.75
-				$weapon = "Oruk-Hai scimitar"
+				$weapon = "Uruk-Hai scimitar"
 		
 			else
 				puts "Too bad🙁."
 				puts "I hope you don't regret your choice in the future."
 			end
-			puts "soon, 30 more Oruk-Hai appear. You begin to ride."
+			puts "soon, 30 more Uruk-Hai appear. You begin to ride."
 	
 		else
 			puts "You die, because you just sit there with your head lulled back."
