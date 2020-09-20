@@ -33,6 +33,6 @@ I'm focusing on learning other code languages currently and I just dont have eno
 
 ### Please Enjoy this Game, and remember:
 >Not all those who wander are lost*
- *this was kindof just a line in a song. Its been over-comertialized.
+ *this was kindof just a line in a song. Its been over-comertcialized.
 
 
