@@ -1,5 +1,4 @@
 # Lord of the Rings: Before the Rings
->![Ring logo](https://docs.google.com/drawings/d/e/2PACX-1vSi7zHjayxiLQDwheMKs5Py-iSwYKJ-U5P6cMGBMQunMRXKZshRZs3U08zQWyxZDNigvJnKcVO9Rib-/pub?w=323&amp;h=159)
 
 This is a text adventure game exploring the land of Middle-Earth. 
 
@@ -14,12 +13,12 @@ run this in your terminal/powershell/commandline (for mac it's Terminal.app in y
 This is planed to be at first, a relatively easy game, and then its difficulty progresses according to the gameplay. This game would be ok for beging players, for it is planed to have a difficulty that rises slowly, and ocasionaly drops back down.
 
 ## Location
-If it took place in the third age, the adventure would begin along the river labeled Ciril, the Goblin Warlord's lair being found in the Ephel Duath, about halfway inbetween the Crossings of Poros and the Sea of Nurnen.
+If it took place in the third age, the adventure would begin along the river Anduin, the Goblin Warlord's lair being found in the Ephel Duath, about halfway inbetween the Crossings of Poros and the Sea of Nurnen.
 
->![Map of Middle Earth](https://i.imgur.com/VNYqEcp.jpg)
 
 ## Code
-This project is written in basic ruby, with some moderatly advanced systems.
+This project is written in basic ruby, with some moderatly advanced systems, and some overly complicated ones that have been yet to be implimented. Doing stuff in ruby is a pain if you dont want basic options.
+I'm focusing on learning other code languages currently and I just dont have enough man power or time to do botgh, so this will probably continue to be incomplete.
 
 ## Major Updates
 
@@ -33,7 +32,7 @@ This project is written in basic ruby, with some moderatly advanced systems.
 >903, after Boromir complete
 
 ### Please Enjoy this Game, and remember:
->Not all those who wander are lost
+>Not all those who wander are lost*
+ *this was kindof just a line in a song. Its been over-comertialized.
 
-![Elvish not all those who wander are lost](http://i.imgur.com/nItllTU.jpg)
 
